@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="2"/>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://github.com/openembedded" name="oe"/>
+  <remote fetch="git://github.com/kraj"  name="Clang"/>
+  <remote fetch="git://github.com/jwinarske"  name="JUCE"/>
+  
+  <project remote="yocto" revision="f9ef210967ab34168d4a24930987dc0731baf56f" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="d17588fe8673b794b589335a753f4c1c90e12f88" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
+
+  <project remote="oe" revision="9e60d30669a2ad0598e9abf0cd15ee06b523986b" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <project remote="Clang" revision="81ba160c95b12b2922f99b60bef25ab37a5e2f0e" name="meta-clang" path="sources/meta-clang" />
+  
+  <project remote="JUCE" revision="e3b31edf052e097b31dffa0843db49bec80358a3" name="meta-juce" path="sources/meta-juce" />
+
+</manifest>
