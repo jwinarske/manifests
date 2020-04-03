@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="8"/>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://github.com/openembedded" name="oe"/>
+  <remote fetch="git://github.com/96boards" name="96boards"/>
+  <remote fetch="http://git.linaro.org" name="linaro"/>
+  <remote fetch="git://github.com/jwinarske"  name="JUCE"/>
+  
+  <project remote="yocto" revision="zeus" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="zeus" name="meta-qcom" path="sources/meta-qcom"/>
+  <project remote="yocto" revision="zeus" name="meta-security" path="sources/meta-security"/>
+
+  <project remote="oe" revision="zeus" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <project remote="96boards" revision="zeus" name="meta-96boards" path="sources/meta-96boards" />
+  <project remote="96boards" revision="zeus" name="meta-rpb" path="sources/meta-rpb"/>
+  <project remote="96boards" revision="zeus" name="oe-rpb-manifest" path="conf">
+
+  <project remote="linaro" revision="zeus" name="openembedded/meta-linaro" path="sources/meta-linaro" />
+  <project remote="linaro" revision="zeus" name="openembedded/meta-backports" path="sources/meta-backports" />
+  
+  <project remote="JUCE" revision="master" name="meta-juce" path="sources/meta-juce" />
+
+</manifest>
