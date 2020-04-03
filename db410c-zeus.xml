@@ -17,8 +17,10 @@
 
   <project remote="96boards" revision="zeus" name="meta-96boards" path="layers/meta-96boards"/>
   <project remote="96boards" revision="zeus" name="meta-rpb" path="layers/meta-rpb"/>
-  <project remote="96boards" revision="zeus" name="oe-rpb-manifest" path="conf"/>
-
+  <project remote="96boards" revision="zeus" name="oe-rpb-manifest" path="conf">
+    <linkfile dest="setup-environment" src="setup-environment-internal"/>
+  </project>
+  
   <project remote="linaro" revision="zeus" name="openembedded/meta-linaro" path="layers/meta-linaro"/>
   <project remote="linaro" revision="zeus" name="openembedded/meta-backports" path="layers/meta-backports"/>
   
