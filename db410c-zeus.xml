@@ -9,19 +9,19 @@
   <remote fetch="http://git.linaro.org" name="linaro"/>
   <remote fetch="git://github.com/jwinarske"  name="JUCE"/>
   
-  <project remote="yocto" revision="zeus" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="zeus" name="meta-qcom" path="sources/meta-qcom"/>
-  <project remote="yocto" revision="zeus" name="meta-security" path="sources/meta-security"/>
+  <project remote="yocto" revision="zeus" name="poky" path="layers/poky"/>
+  <project remote="yocto" revision="zeus" name="meta-qcom" path="layers/meta-qcom"/>
+  <project remote="yocto" revision="zeus" name="meta-security" path="layers/meta-security"/>
 
-  <project remote="oe" revision="zeus" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="zeus" name="meta-openembedded" path="layers/meta-openembedded"/>
 
-  <project remote="96boards" revision="zeus" name="meta-96boards" path="sources/meta-96boards"/>
-  <project remote="96boards" revision="zeus" name="meta-rpb" path="sources/meta-rpb"/>
+  <project remote="96boards" revision="zeus" name="meta-96boards" path="layers/meta-96boards"/>
+  <project remote="96boards" revision="zeus" name="meta-rpb" path="layers/meta-rpb"/>
   <project remote="96boards" revision="zeus" name="oe-rpb-manifest" path="conf"/>
 
-  <project remote="linaro" revision="zeus" name="openembedded/meta-linaro" path="sources/meta-linaro"/>
-  <project remote="linaro" revision="zeus" name="openembedded/meta-backports" path="sources/meta-backports"/>
+  <project remote="linaro" revision="zeus" name="openembedded/meta-linaro" path="layers/meta-linaro"/>
+  <project remote="linaro" revision="zeus" name="openembedded/meta-backports" path="layers/meta-backports"/>
   
-  <project remote="JUCE" revision="master" name="meta-juce" path="sources/meta-juce"/>
+  <project remote="JUCE" revision="master" name="meta-juce" path="layers/meta-juce"/>
 
 </manifest>
