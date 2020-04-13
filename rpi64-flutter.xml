@@ -13,6 +13,6 @@
 
   <project remote="oe" revision="9e60d30669a2ad0598e9abf0cd15ee06b523986b" name="meta-openembedded" path="sources/meta-openembedded"/>
 
-  <project remote="flutter" revision="0fe37f41be6ce0e0dbdb573d07cd535fd80357b8" name="meta-flutter" path="sources/meta-flutter" />
+  <project remote="flutter" revision="0fe37f41be6ce0e0dbdb573d07cd535fd80357b8" dest-branch="zeus" name="meta-flutter" path="sources/meta-flutter" />
 
 </manifest>
