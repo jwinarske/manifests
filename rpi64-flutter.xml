@@ -7,12 +7,12 @@
   <remote fetch="git://github.com/openembedded" name="oe"/>
   <remote fetch="git://github.com/jwinarske"  name="flutter"/>
   
-  <project remote="yocto" revision="f9ef210967ab34168d4a24930987dc0731baf56f" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="d17588fe8673b794b589335a753f4c1c90e12f88" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
+  <project remote="yocto" revision="5531ffc5668c2f24b9018a7b7174b5c77315a1cf" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="0e05098853eea77032bff9cf81955679edd2f35d" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
   <project remote="yocto" revision="ecd8c30af6b1b957b4fa814d3f25c40f060b3ac1" name="meta-security" path="sources/meta-security"/>
 
   <project remote="oe" revision="9e60d30669a2ad0598e9abf0cd15ee06b523986b" name="meta-openembedded" path="sources/meta-openembedded"/>
 
-  <project remote="flutter" revision="97ff8f69f0e8a77b4a90625acea537e5fcce86f5" name="meta-flutter" path="sources/meta-flutter" />
+  <project remote="flutter" revision="0fe37f41be6ce0e0dbdb573d07cd535fd80357b8" name="meta-flutter" path="sources/meta-flutter" />
 
 </manifest>
