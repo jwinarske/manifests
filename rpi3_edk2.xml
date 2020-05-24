@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="2"/>
+
+  <remote fetch="https://github.com/Microsoft" name="msft"/>
+  <remote fetch="https://github.com/tianocore" name="edk2"/>
+
+  <project remote="msft" revision="release/202002" name="mu_plus" path="Common/MU"/>
+  <project remote="msft" revision="release/202002" name="mu_basecore" path="MU_BASECORE"/>
+  <project remote="msft" revision="release/202002" name="mu_tiano_plus" path="Common/MU_TIANO"/>
+  <project remote="msft" revision="release/202002" name="mu_oem_sample" path="Common/MU_OEM_SAMPLE"/>
+  <project remote="msft" revision="release/202002" name="mu_silicon_arm_tiano" path="Silicon/ARM/MU_TIANO"/>
+
+  <project remote="edk2" revision="8977ff44a5737dcc5c70b29e684b0f4d21869ae3" name="edk2-platforms" path="edk2-platforms"/>
+  <project remote="edk2" revision="dc4afd066ca54b79e966cf36283ba08e0d5f745d" name="edk2-non-osi" path="edk2-non-osi"/>
+
+</manifest>
