@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="8" revision="dunfell"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
+  <remote fetch="https://github.com/meta-qt5" name="qt5"/>
+  <remote fetch="https://github.com/meta-rust" name="rust" branch="master"/>
+  <remote fetch="https://github.com/kraj" name="clang"/>
+  <remote fetch="https://github.com/jumpnow" name="jn"/>
+  <remote fetch="https://github.com/jwinarske"  name="jw"/>
+
+  <project remote="yocto" name="poky" path="sources/poky"/>
+  <project remote="oe" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="qt5" name="meta-qt5" path="sources/meta-qt5"/>
+  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
+  <project remote="yocto" name="meta-security" path="sources/meta-security"/>
+  <project remote="yocto" name="meta-selinux" path="sources/meta-selinux"/>
+
+  <project remote="rust" revision="master" name="meta-rust" path="sources/meta-rust"/>
+  <project remote="clang" name="meta-clang" path="sources/meta-clang"/>
+
+  <project remote="jn" name="meta-jumpnow" path="sources/meta-jumpnow"/>
+  <project remote="jw" name="meta-flutter" path="sources/meta-flutter" />
+
+</manifest>

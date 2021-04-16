@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="8" revision="dunfell"/>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://github.com/openembedded" name="oe"/>
+  <remote fetch="git://github.com/96boards" name="96boards"/>
+  <remote fetch="http://git.linaro.org" name="linaro"/>
+  <remote fetch="https://github.com/meta-rust" name="rust" branch="master"/>
+  <remote fetch="https://github.com/kraj" name="clang"/>
+  <remote fetch="https://github.com/jwinarske"  name="jw"/>
+
+  <project remote="yocto" name="poky" path="layers/poky"/>
+  <project remote="yocto" name="meta-qcom" path="layers/meta-qcom"/>
+  <project remote="yocto" name="meta-security" path="layers/meta-security"/>
+
+  <project remote="oe" name="meta-openembedded" path="layers/meta-openembedded"/>
+
+  <project remote="96boards" name="meta-96boards" path="layers/meta-96boards"/>
+  <project remote="96boards" name="meta-rpb" path="layers/meta-rpb"/>
+  <project remote="96boards" name="oe-rpb-manifest" path="conf">
+    <linkfile dest="setup-environment" src="setup-environment-internal"/>
+  </project>
+  
+  <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro"/>
+  <project remote="linaro" name="openembedded/meta-backports" path="layers/meta-backports"/>
+
+  <project remote="jw" name="meta-flutter" path="sources/meta-flutter" />
+
+</manifest>
