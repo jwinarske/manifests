@@ -4,7 +4,7 @@
   <default sync-j="8" revision="dunfell"/>
 
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
-  <remote fetch="https://github.com/OE4T/meta-tegra" name="tegra"/>
+  <remote fetch="https://github.com/OE4T" name="tegra"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
   <remote fetch="https://github.com/meta-qt5" name="qt5"/>
   <remote fetch="https://github.com/meta-rust" name="rust" branch="master"/>
