@@ -13,7 +13,7 @@ Install Google repo
 
 Download the BSP source:
 
-    PATH=${PATH}:~/bin
+    export PATH=${PATH}:~/bin
     mkdir rpi64_yocto
     cd rpi64_yocto
     repo init -u https://github.com/jwinarske/manifests.git -b dunfell -m rpi64.xml
@@ -21,7 +21,7 @@ Download the BSP source:
     
 Configure
 
-    source sources/poky/oe-init-build-env rpi4-64
+    source ./sources/poky/oe-init-build-env raspberrypi4-64
     bitbake-layers add-layer \
     ../sources/meta-raspberrypi \
     ../sources/meta-openembedded/meta-oe \
@@ -31,7 +31,6 @@ Configure
     ../sources/meta-openembedded/meta-perl \
     ../sources/meta-security \
     ../sources/meta-qt5 \
-    ../sources/meta-rpi64 \
     ../sources/meta-clang \
     ../sources/meta-rust \
     ../sources/meta-flutter
@@ -48,4 +47,4 @@ Build Image
 Restarting a Development Session
 
     cd rpi64_yocto
-    source sources/poky/oe-init-build-env rpi4-64
+    source ./sources/poky/oe-init-build-env raspberrypi4-64
