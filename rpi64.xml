@@ -5,7 +5,7 @@
   
   <default sync-j="8"/>
 
-  <project name="jwinarske/manifests.git" path="conf" remote="github" revision="e1ea15e5551835d9eda642ee616e1e7195b1dfd7" upstream="dunfell" dest-branch="dunfell">
+  <project name="jwinarske/manifests.git" path="conf" remote="github" revision="9430498ec4dc419650ebbb73c1568bf849f38833" upstream="dunfell" dest-branch="dunfell">
     <linkfile src="conf/rpi64_config" dest="setup-environment"/>
   </project>
   
