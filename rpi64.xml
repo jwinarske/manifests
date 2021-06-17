@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote name="github" fetch="https://github.com"/>
+  <remote name="yocto" fetch="https://git.yoctoproject.org/git"/>
+  
+  <default sync-j="8"/>
 
-  <default sync-j="8" revision="dunfell"/>
+  <project name="jwinarske/manifests.git" path="conf" remote="github" revision="" upstream="dunfell" dest-branch="dunfell">
+    <linkfile src="conf/rpi64_config" dest="setup-environment"/>
+  </project>
+  
+  <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="2915810edbb6599051e30efb3b7f805665ddcc23" upstream="dunfell" dest-branch="dunfell"/>
+  <project name="meta-qt5/meta-qt5" path="sources/meta-qt5" remote="github" revision="b4d24d70aca75791902df5cd59a4f4a54aa4a125" upstream="dunfell" dest-branch="dunfell"/>
+  <project name="meta-raspberrypi" path="sources/meta-raspberrypi" remote="yocto" revision="77190af02d48adc2b28216775e6318e9eeda571c" upstream="dunfell" dest-branch="dunfell"/>
+  <project name="meta-rust/meta-rust" path="sources/meta-rust" remote="github" revision="494d879a1d337cda5b3a19406cabe46fcd3aee76" upstream="master" dest-branch="master"/>
+  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="93232ae6d52b0d1968aa0ce69fa745e85e3bbc6b" upstream="dunfell" dest-branch="dunfell"/>
+  <project name="meta-selinux" path="sources/meta-selinux" remote="yocto" revision="c9de7989464c7cd774e25d23496ed63ffc4ecdf6" upstream="dunfell" dest-branch="dunfell"/>
+  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="07ed07b9f1f1d54e5808b740e3d9a9e69748e64e" upstream="master" dest-branch="master"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="97a9f30f1c457c55bf0c791d0466ff8620110a49" upstream="dunfell" dest-branch="dunfell"/>
 
-  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
-  <remote fetch="https://github.com/openembedded" name="oe"/>
-  <remote fetch="https://github.com/meta-qt5" name="qt5"/>
-  <remote fetch="https://github.com/meta-rust" name="rust" branch="master"/>
-  <remote fetch="https://github.com/kraj" name="clang"/>
-  <remote fetch="https://github.com/jumpnow" name="jn"/>
-  <remote fetch="https://github.com/jwinarske"  name="jw"/>
-
-  <project remote="yocto" name="poky" path="sources/poky"/>
-  <project remote="oe" name="meta-openembedded" path="sources/meta-openembedded"/>
-  <project remote="qt5" name="meta-qt5" path="sources/meta-qt5"/>
-  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
-  <project remote="yocto" name="meta-security" path="sources/meta-security"/>
-  <project remote="yocto" name="meta-selinux" path="sources/meta-selinux"/>
-
-  <project remote="rust" revision="master" name="meta-rust" path="sources/meta-rust"/>
-  <project remote="clang" name="meta-clang" path="sources/meta-clang"/>
-
-  <project remote="jn" name="meta-jumpnow" path="sources/meta-jumpnow"/>
-  <project remote="jw" name="meta-flutter" path="sources/meta-flutter" />
+  <project name="jumpnow/meta-jumpnow" path="sources/meta-jumpnow" remote="github" revision="b3995636741be0d219a50035c98ded8b48590888" upstream="dunfell" dest-branch="dunfell"/>
+  <project name="kraj/meta-clang" path="sources/meta-clang" remote="github" revision="e63d6f9abba5348e2183089d6ef5ea384d7ae8d8" upstream="dunfell" dest-branch="dunfell"/>
+  <project name="jwinarske/meta-flutter.git" path="sources/meta-flutter" remote="github" revision="2ad58bd301a23398cdaa944e32b72bc8c1534d66" upstream="dunfell" dest-branch="dunfell"/>
 
 </manifest>
