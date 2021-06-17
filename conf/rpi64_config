@@ -15,7 +15,6 @@ bitbake-layers add-layer \
 ../sources/meta-openembedded/meta-webserver \
 ../sources/meta-security \
 ../sources/meta-selinux \
-../sources/meta-rpi64 \
 ../sources/meta-qt5 \
 ../sources/meta-jumpnow \
 ../sources/meta-clang \
