@@ -30,7 +30,7 @@ INHERIT += "rm_work"
 BBMASK = "meta-networking/recipes-kernel/wireguard"
 
 DISTRO_FEATURES_remove = " sysvinit"
-DISTRO_FEATURES_append = " alsa bluetooth usbhost wayland opengl vulkan systemd"
+DISTRO_FEATURES_append = " alsa bluetooth usbhost opengl vulkan systemd"
 
 INIT_MANAGER = "systemd"
 VIRTUAL-RUNTIME_init_manager = "systemd"
