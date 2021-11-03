@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="8" revision="dunfell"/>
+  <default sync-j="8"/>
 
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
-  <remote fetch="https://github.com/OE4T" name="tegra"/>
-  <remote fetch="https://github.com/openembedded" name="oe"/>
-  <remote fetch="https://github.com/meta-qt5" name="qt5"/>
-  <remote fetch="https://github.com/meta-rust" name="rust" branch="master"/>
-  <remote fetch="https://github.com/kraj" name="clang"/>
-  <remote fetch="https://github.com/jwinarske"  name="jw"/>
+  <remote fetch="https://github.com" name="github"/>
+  
+  <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="e886fc0cbac89998f675b70679d0cce6bcebfb7f"/>
+  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="e81c15f851ca5396c78c8737967ee38db0ebe0cd"/>
+  <project name="meta-selinux" path="sources/meta-selinux" remote="yocto" revision="4d2bb085d29c4d6f2ccb62fec53da23ff541183e"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="honister-3.4"/>
 
-  <project remote="yocto" name="poky" path="sources/poky"/>
-  <project remote="oe" name="meta-openembedded" path="sources/meta-openembedded"/>
-  <project remote="qt5" name="meta-qt5" path="sources/meta-qt5"/>
-  <project remote="tegra" name="meta-tegra" path="sources/meta-tegra"/>
-  <project remote="yocto" name="meta-security" path="sources/meta-security"/>
-  <project remote="yocto" name="meta-selinux" path="sources/meta-selinux"/>
+  <project name="OE4T/meta-tegra" path="sources/meta-tegra" remote="github" revision="honister"/>
+  <project name="OE4T/tegra-demo-distro" path="sources/tegra-demo-distro" remote="github" revision="honister">
+    <linkfile src="sources/tegra-demo-distro/setup-env" dest="setup-environment"/>
+  </project>
 
-  <project remote="rust" revision="master" name="meta-rust" path="sources/meta-rust"/>
-  <project remote="clang" name="meta-clang" path="sources/meta-clang"/>
-
-  <project remote="jw" name="meta-flutter" path="sources/meta-flutter" />
-
+  <project name="kraj/meta-clang" path="sources/meta-clang" remote="github" revision="826f7287ffb8ae87bd843ecfe4a21a661bb03294"/>
+  <project name="meta-flutter/meta-flutter.git" path="sources/meta-flutter" remote="github" revision="honister"/>
 </manifest>
