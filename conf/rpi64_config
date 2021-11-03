@@ -55,6 +55,7 @@ SERIAL_CONSOLES = ""
 
 GPU_MEM = "64"
 KERNEL_MODULE_AUTOLOAD_raspberrypi4-64 += "i2c-dev i2c-bcm2708"
+IMAGE_INSTALL_append = " kernel-modules"
 DISPMANX_OFFLINE = "1"
 LINUX_KERNEL_TYPE = "preempt-rt"
 CMDLINE_DEBUG = "quiet"
