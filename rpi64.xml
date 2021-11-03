@@ -15,7 +15,7 @@
   <project name="meta-selinux" path="sources/meta-selinux" remote="yocto" revision="4d2bb085d29c4d6f2ccb62fec53da23ff541183e"/>
   <project name="poky" path="sources/poky" remote="yocto" revision="f6d1126fff213460dc6954a5d5fc168606d76b66"/>
 
-  <project name="kraj/meta-clang" path="sources/meta-clang" remote="github" revision="honister"/>
+  <project name="kraj/meta-clang" path="sources/meta-clang" remote="github" revision="826f7287ffb8ae87bd843ecfe4a21a661bb03294"/>
   <project name="jwinarske/meta-flutter.git" path="sources/meta-flutter" remote="github" revision="honister"/>
 
 </manifest>
