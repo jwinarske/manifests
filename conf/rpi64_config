@@ -25,21 +25,21 @@ INHERIT += "rm_work"
 
 BBMASK = "meta-networking/recipes-kernel/wireguard"
 
-DISTRO_FEATURES_remove = " sysvinit x11"
-DISTRO_FEATURES_append = " alsa bluetooth usbhost opengl vulkan systemd"
+DISTRO_FEATURES:remove = " sysvinit x11"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan systemd"
 
 INIT_MANAGER = "systemd"
-VIRTUAL-RUNTIME_init_manager = "systemd"
-VIRTUAL-RUNTIME_initscripts = ""
+VIRTUAL-RUNTIME:init_manager = "systemd"
+VIRTUAL-RUNTIME:initscripts = ""
 
-DISTRO_FEATURES_append=" pam selinux"
+DISTRO_FEATURES:append=" pam selinux"
 DISTRO_FEATURES_BACKFILL_CONSIDERED = ""
 
 COMBINED_FEATURES += "alsa "
-MACHINE_FEATURES_remove = "apm"
+MACHINE_FEATURES:remove = "apm"
 
-PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
-PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
+PREFERRED_PROVIDER:jpeg = "libjpeg-turbo"
+PREFERRED_PROVIDER:jpeg-native = "libjpeg-turbo-native"
 
 DISABLE_OVERSCAN = "1"
 DISABLE_RPI_BOOT_LOGO = "1"
@@ -50,11 +50,11 @@ ENABLE_UART = "0"
 SERIAL_CONSOLES = ""
 
 GPU_MEM = "64"
-KERNEL_MODULE_AUTOLOAD_raspberrypi4-64 += "i2c-dev i2c-bcm2708"
+KERNEL_MODULE_AUTOLOAD:raspberrypi4-64 += "i2c-dev i2c-bcm2708"
 DISPMANX_OFFLINE = "1"
 LINUX_KERNEL_TYPE = "preempt-rt"
 CMDLINE_DEBUG = "quiet"
-PREFERRED_VERSION_linux-raspberrypi = "5.10.%"
+PREFERRED_VERSION:linux-raspberrypi = "5.10.%"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
   kernel-modules \
