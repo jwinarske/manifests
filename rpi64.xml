@@ -16,6 +16,6 @@
   <project name="poky" path="sources/poky" remote="yocto" revision="honister"/>
 
   <project name="kraj/meta-clang" path="sources/meta-clang" remote="github" revision="honister"/>
-  <project name="jwinarske/meta-flutter.git" path="sources/meta-flutter" remote="github" revision="dunfell"/>
+  <project name="jwinarske/meta-flutter.git" path="sources/meta-flutter" remote="github" revision="honister"/>
 
 </manifest>
