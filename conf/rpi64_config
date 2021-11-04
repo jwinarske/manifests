@@ -12,7 +12,6 @@ bitbake-layers add-layer \
 ../sources/meta-openembedded/meta-networking \
 ../sources/meta-openembedded/meta-python \
 ../sources/meta-openembedded/meta-perl \
-../sources/meta-selinux \
 ../sources/meta-clang \
 ../sources/meta-flutter
 
@@ -26,7 +25,7 @@ BBMASK = "meta-networking/recipes-kernel/wireguard"
 
 DISTRO_FEATURES:remove = "sysvinit x11"
 DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan systemd"
-DISTRO_FEATURES:append = " pam selinux"
+# DISTRO_FEATURES:append = " pam selinux"
 
 INIT_MANAGER = "systemd"
 VIRTUAL-RUNTIME:init_manager = "systemd"
@@ -34,13 +33,12 @@ VIRTUAL-RUNTIME:initscripts = ""
 
 DISTRO_FEATURES_BACKFILL_CONSIDERED = ""
 
-LINUX_KERNEL_TYPE = "preempt-rt"
-CMDLINE_DEBUG = "quiet"
-PREFERRED_VERSION:linux-raspberrypi = "5.10.%"
-
 COMBINED_FEATURES += "alsa "
 MACHINE_FEATURES:remove = "apm"
 
+LINUX_KERNEL_TYPE = "preempt-rt"
+PREFERRED_VERSION:linux-raspberrypi = "5.10.%"
+# CMDLINE_DEBUG = "quiet"
 
 GPU_MEM = "256"
 DISPMANX_OFFLINE = "1"
@@ -49,17 +47,16 @@ DISABLE_OVERSCAN = "1"
 DISABLE_RPI_BOOT_LOGO = "1"
 DISABLE_SPLASH = "1"
 
-ENABLE_SPI_BUS = "1"
+# ENABLE_SPI_BUS = "0"
 
-ENABLE_I2C = "1"
-KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
+# ENABLE_I2C = "0"
+# KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
 
-ENABLE_UART = "1"
-SERIAL_CONSOLES = "115200;ttyAMA0"
-
+ENABLE_UART = "0"
+# SERIAL_CONSOLES = "115200;ttyAMA0"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
-  packagegroup-core-selinux \
+  kernel-modules \
   avahi-daemon \
   vulkan-loader vulkan-tools \
   adwaita-icon-theme-cursors \
