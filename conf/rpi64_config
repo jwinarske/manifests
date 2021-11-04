@@ -21,12 +21,12 @@ sed -i "s|MACHINE ??= \"qemux86-64\"|MACHINE ?= \"$MACHINE\"|g" conf/local.conf
 
 cat <<EOT >> conf/local.conf
 
-INHERIT += "rm_work"
+INHERIT:append = " rm_work"
 
 BBMASK = "meta-networking/recipes-kernel/wireguard"
 
-DISTRO_FEATURES:remove = " sysvinit x11"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan systemd security"
+DISTRO_FEATURES:remove = "sysvinit x11"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan systemd"
 
 PACKAGECONFIG:pn-mesa:append = " vulkan broadcom"
 
@@ -34,7 +34,7 @@ INIT_MANAGER = "systemd"
 VIRTUAL-RUNTIME:init_manager = "systemd"
 VIRTUAL-RUNTIME:initscripts = ""
 
-DISTRO_FEATURES:append=" pam selinux"
+# DISTRO_FEATURES:append=" pam selinux security"
 DISTRO_FEATURES_BACKFILL_CONSIDERED = ""
 
 COMBINED_FEATURES += "alsa "
@@ -51,16 +51,18 @@ ENABLE_I2C = "1"
 ENABLE_UART = "0"
 SERIAL_CONSOLES = ""
 
-GPU_MEM = "64"
-KERNEL_MODULE_AUTOLOAD:raspberrypi4-64 += "i2c-dev i2c-bcm2708"
+GPU_MEM = "256"
+KERNEL_MODULE_AUTOLOAD:raspberrypi4-64:append = " i2c-dev"
+KERNEL_MODULE_AUTOLOAD:raspberrypi4-64:append = " i2c-bcm2708"
 DISPMANX_OFFLINE = "1"
 LINUX_KERNEL_TYPE = "preempt-rt"
-CMDLINE_DEBUG = "quiet"
+# CMDLINE_DEBUG = "quiet"
 PREFERRED_VERSION:linux-raspberrypi = "5.10.%"
+
+# packagegroup-core-selinux
 
 CORE_IMAGE_EXTRA_INSTALL += " \
   kernel-modules \
-  packagegroup-core-selinux \
   avahi-daemon \
   vulkan-loader vulkan-tools \
   adwaita-icon-theme-cursors \
