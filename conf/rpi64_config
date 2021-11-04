@@ -62,7 +62,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   kernel-modules \
   packagegroup-core-selinux \
   avahi-daemon \
-  vulkan-loader vulkan-tools vulkan-samples \
+  vulkan-loader vulkan-tools \
   adwaita-icon-theme-cursors \
   xdg-user-dirs \
 "
