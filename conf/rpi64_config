@@ -26,7 +26,7 @@ INHERIT += "rm_work"
 BBMASK = "meta-networking/recipes-kernel/wireguard"
 
 DISTRO_FEATURES:remove = " sysvinit x11"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan systemd"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan systemd security"
 
 PACKAGECONFIG:pn-mesa:append = " vulkan broadcom"
 
