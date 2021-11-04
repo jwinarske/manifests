@@ -1,0 +1,24 @@
+From 8a3eacc79399bb335b2bf099ba538bdccfd6fda6 Mon Sep 17 00:00:00 2001
+From: Joel Winarske <joel.winarske@gmail.com>
+Date: Wed, 3 Nov 2021 19:32:57 -0700
+Subject: [PATCH] mesa broadcom vulkan
+
+---
+ meta/recipes-graphics/mesa/mesa.inc | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/meta/recipes-graphics/mesa/mesa.inc b/meta/recipes-graphics/mesa/mesa.inc
+index 282671d30f..2f8faac754 100644
+--- a/meta/recipes-graphics/mesa/mesa.inc
++++ b/meta/recipes-graphics/mesa/mesa.inc
+@@ -113,6 +113,7 @@ VULKAN_DRIVERS = ""
+ VULKAN_DRIVERS:append:x86:class-target = ",intel"
+ VULKAN_DRIVERS:append:x86-64:class-target = ",intel"
+ VULKAN_DRIVERS:append ="${@bb.utils.contains('PACKAGECONFIG', 'freedreno', ',freedreno', '', d)}"
++VULKAN_DRIVERS:append ="${@bb.utils.contains('PACKAGECONFIG', 'broadcom', 'broadcom', '', d)}"
+ PACKAGECONFIG[vulkan] = "-Dvulkan-drivers=${@strip_comma('${VULKAN_DRIVERS}')}, -Dvulkan-drivers='',"
+ 
+ PACKAGECONFIG[opengl] = "-Dopengl=true, -Dopengl=false"
+-- 
+2.31.1
+
