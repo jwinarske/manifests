@@ -12,10 +12,11 @@ bitbake-layers add-layer \
 ../sources/meta-openembedded/meta-networking \
 ../sources/meta-openembedded/meta-python \
 ../sources/meta-openembedded/meta-perl \
-../sources/meta-security \
-../sources/meta-selinux \
 ../sources/meta-clang \
 ../sources/meta-flutter
+
+# ../sources/meta-security \
+# ../sources/meta-selinux \
 
 sed -i "s|MACHINE ??= \"qemux86-64\"|MACHINE ?= \"$MACHINE\"|g" conf/local.conf
 
@@ -28,13 +29,10 @@ BBMASK = "meta-networking/recipes-kernel/wireguard"
 DISTRO_FEATURES:remove = "sysvinit x11"
 DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan systemd"
 
-PACKAGECONFIG:pn-mesa:append = " vulkan broadcom"
-
 INIT_MANAGER = "systemd"
 VIRTUAL-RUNTIME:init_manager = "systemd"
 VIRTUAL-RUNTIME:initscripts = ""
 
-# DISTRO_FEATURES:append=" pam selinux security"
 DISTRO_FEATURES_BACKFILL_CONSIDERED = ""
 
 COMBINED_FEATURES += "alsa "
@@ -44,16 +42,16 @@ PREFERRED_PROVIDER:jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER:jpeg-native = "libjpeg-turbo-native"
 
 DISABLE_OVERSCAN = "1"
-DISABLE_RPI_BOOT_LOGO = "1"
-DISABLE_SPLASH = "1"
-ENABLE_SPI_BUS = "1"
-ENABLE_I2C = "1"
-ENABLE_UART = "0"
-SERIAL_CONSOLES = ""
+# DISABLE_RPI_BOOT_LOGO = "1"
+# DISABLE_SPLASH = "1"
+# ENABLE_SPI_BUS = "1"
+# ENABLE_I2C = "1"
+# ENABLE_UART = "0"
+# SERIAL_CONSOLES = ""
 
 GPU_MEM = "256"
-KERNEL_MODULE_AUTOLOAD:raspberrypi4-64:append = " i2c-dev"
-KERNEL_MODULE_AUTOLOAD:raspberrypi4-64:append = " i2c-bcm2708"
+# KERNEL_MODULE_AUTOLOAD:raspberrypi4-64:append = " i2c-dev"
+# KERNEL_MODULE_AUTOLOAD:raspberrypi4-64:append = " i2c-bcm2708"
 DISPMANX_OFFLINE = "1"
 LINUX_KERNEL_TYPE = "preempt-rt"
 # CMDLINE_DEBUG = "quiet"
