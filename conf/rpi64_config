@@ -59,7 +59,7 @@ SERIAL_CONSOLES = "115200;ttyAMA0"
 
 
 CORE_IMAGE_EXTRA_INSTALL += " \
-  packagegroup-core-selinux
+  packagegroup-core-selinux \
   avahi-daemon \
   vulkan-loader vulkan-tools \
   adwaita-icon-theme-cursors \
