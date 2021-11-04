@@ -5,7 +5,7 @@
   
   <default sync-j="8"/>
 
-  <project name="jwinarske/manifests.git" path="conf" remote="github" revision="honister">
+  <project name="jwinarske/manifests" path="conf" remote="github" revision="honister">
     <linkfile src="conf/rpi64_config" dest="setup-environment"/>
   </project>
   
