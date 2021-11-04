@@ -12,13 +12,9 @@ bitbake-layers add-layer \
 ../sources/meta-openembedded/meta-networking \
 ../sources/meta-openembedded/meta-python \
 ../sources/meta-openembedded/meta-perl \
-../sources/meta-openembedded/meta-webserver \
 ../sources/meta-security \
 ../sources/meta-selinux \
-../sources/meta-qt5 \
-../sources/meta-jumpnow \
 ../sources/meta-clang \
-../sources/meta-rust \
 ../sources/meta-flutter
 
 sed -i "s|MACHINE ??= \"qemux86-64\"|MACHINE ?= \"$MACHINE\"|g" conf/local.conf
@@ -53,15 +49,15 @@ ENABLE_I2C = "1"
 ENABLE_UART = "0"
 SERIAL_CONSOLES = ""
 
-GPU_MEM = "64"
+GPU_MEM = "256"
 KERNEL_MODULE_AUTOLOAD_raspberrypi4-64 += "i2c-dev i2c-bcm2708"
-IMAGE_INSTALL_append = " kernel-modules"
 DISPMANX_OFFLINE = "1"
 LINUX_KERNEL_TYPE = "preempt-rt"
 CMDLINE_DEBUG = "quiet"
 PREFERRED_VERSION_linux-raspberrypi = "5.4.%"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
+  kernel-modules
   packagegroup-core-selinux \
   avahi-daemon \
   vulkan-loader vulkan-tools \
