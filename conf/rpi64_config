@@ -28,6 +28,8 @@ BBMASK = "meta-networking/recipes-kernel/wireguard"
 DISTRO_FEATURES:remove = " sysvinit x11"
 DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan systemd"
 
+PACKAGECONFIG:pn-mesa:append = " vulkan broadcom"
+
 INIT_MANAGER = "systemd"
 VIRTUAL-RUNTIME:init_manager = "systemd"
 VIRTUAL-RUNTIME:initscripts = ""
@@ -60,7 +62,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   kernel-modules \
   packagegroup-core-selinux \
   avahi-daemon \
-  vulkan-loader vulkan-tools \
+  vulkan-loader vulkan-tools vulkan-samples \
   adwaita-icon-theme-cursors \
   xdg-user-dirs \
 "
