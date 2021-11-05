@@ -17,5 +17,6 @@
 
   <project name="kraj/meta-clang" path="sources/meta-clang" remote="github" revision="826f7287ffb8ae87bd843ecfe4a21a661bb03294"/>
   <project name="meta-flutter/meta-flutter.git" path="sources/meta-flutter" remote="github" revision="honister"/>
+  <project name="jwinarske/meta-vulkan.git" path="sources/meta-vulkan" remote="github" revision="main"/>
 
 </manifest>
