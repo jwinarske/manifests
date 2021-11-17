@@ -10,7 +10,7 @@
   </project>
   
   <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="e886fc0cbac89998f675b70679d0cce6bcebfb7f"/>
-  <project name="meta-raspberrypi" path="sources/meta-raspberrypi" remote="yocto" revision="316b017c53f45da4fb76fab717f3e0a47b239f75"/>
+  <project name="meta-raspberrypi" path="sources/meta-raspberrypi" remote="yocto" revision="7413c72dd538d3956600211326a1c2ef01b8e057"/>
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="e81c15f851ca5396c78c8737967ee38db0ebe0cd"/>
   <project name="meta-selinux" path="sources/meta-selinux" remote="yocto" revision="4d2bb085d29c4d6f2ccb62fec53da23ff541183e"/>
   <project name="poky" path="sources/poky" remote="yocto" revision="f6d1126fff213460dc6954a5d5fc168606d76b66"/>
