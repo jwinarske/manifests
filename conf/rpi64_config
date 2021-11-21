@@ -27,7 +27,7 @@ INHERIT:append = " rm_work"
 BBMASK = "meta-networking/recipes-kernel/wireguard"
 
 DISTRO_FEATURES:remove = "sysvinit x11"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan wayland systemd"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan wayland pam systemd"
 # DISTRO_FEATURES:append = " pam selinux"
 
 INIT_MANAGER = "systemd"
