@@ -12,7 +12,9 @@ bitbake-layers add-layer \
 ../sources/meta-openembedded/meta-networking \
 ../sources/meta-openembedded/meta-python \
 ../sources/meta-openembedded/meta-perl \
-../sources/meta-clang \
+../sources/meta-clang
+
+bitbake-layers add-layer \
 ../sources/meta-vulkan \
 ../sources/meta-flutter
 
