@@ -12,6 +12,8 @@ bitbake-layers add-layer \
 ../sources/meta-openembedded/meta-networking \
 ../sources/meta-openembedded/meta-python \
 ../sources/meta-openembedded/meta-perl \
+../sources/meta-openembedded/meta-webserver \
+../sources/meta-security \
 ../sources/meta-clang
 
 bitbake-layers add-layer \
