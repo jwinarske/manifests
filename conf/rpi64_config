@@ -69,7 +69,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   openssh openssh-keygen openssh-sftp-server \
   ntp ntp-tickadj \
   procps \
-  nmap checksec ncrack nikto \
+  nmap checksec nikto \
   crda iw wpa-supplicant \
   bluez5 bluez5-noinst-tools bluez5-obex bluez5-testtools \
   bluealsa \
