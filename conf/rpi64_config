@@ -67,10 +67,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   openssh openssh-keygen openssh-sftp-server \
   ntp ntp-tickadj \
   procps \
-  wireguard-init \
-  wireguard-module \
-  wireguard-tools \
-  nmap \
   crda iw wpa-supplicant \
   bt-init bluez5 bluez5-noinst-tools bluez5-obex bluez5-testtools \
   bluez-alsa \
