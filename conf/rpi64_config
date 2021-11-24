@@ -140,7 +140,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   ${EXTRA_TOOLS} \
   ${GSTREAMER} \
   kernel-modules \
-  omxplayer \
   ${PYTHON_BT} \
   ${SECURITY_TOOLS} \
   userland \
