@@ -96,7 +96,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   nikto \
   crda \
   iw \
-  linux-firmware-rpidistro-bcm43455 \
   wpa-supplicant \
   adwaita-icon-theme-cursors \
   weston weston-init \
