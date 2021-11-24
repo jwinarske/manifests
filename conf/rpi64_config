@@ -12,7 +12,6 @@ bitbake-layers add-layer \
 ../sources/meta-openembedded/meta-networking \
 ../sources/meta-openembedded/meta-python \
 ../sources/meta-openembedded/meta-perl \
-../sources/meta-openembedded/meta-webserver \
 ../sources/meta-security \
 ../sources/meta-clang
 
@@ -81,15 +80,7 @@ BT = " \
 PYTHON_BT = "python3-pybluez"
 
 ALSA += " \
-    libasound \
-    libavcodec \
-    libavdevice \
-    libavfilter \
-    libavformat \
-    libavutil \
-    libpostproc \
-    libswresample \
-    libswscale \
+    alsa-lib \
     alsa-conf \
     alsa-state \
     alsa-utils \
