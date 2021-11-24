@@ -60,22 +60,93 @@ DISABLE_SPLASH = "1"
 ENABLE_UART = "0"
 # SERIAL_CONSOLES = "115200;ttyAMA0"
 
-CORE_IMAGE_EXTRA_INSTALL += " \
-  kernel-modules \
-  avahi-daemon \
-  vulkan-loader vulkan-tools \
+CORE_OS = " \
+    openssh openssh-keygen openssh-sftp-server \
+    ntp ntp-tickadj \
+    packagegroup-core-boot \
+    procps \
+    term-prompt \
+    tzdata \
+"
+
+BT = " \
+    bluez5 \
+    bluez5-dev \
+    bluez5-noinst-tools \
+    bluez5-obex \
+    bluez5-testtools \
+    bluealsa \
+"
+
+PYTHON_BT = "python3-pybluez"
+
+ALSA += " \
+    libasound \
+    libavcodec \
+    libavdevice \
+    libavfilter \
+    libavformat \
+    libavutil \
+    libpostproc \
+    libswresample \
+    libswscale \
+    alsa-conf \
+    alsa-state \
+    alsa-utils \
+    alsa-utils-scripts \
+"
+
+EXTRA_TOOLS = " \
+    canutils \
+    nmap \
+"
+
+GSTREAMER = " \
+    gstreamer1.0 \
+    gstreamer1.0-libav \
+    gstreamer1.0-meta-base \
+    gstreamer1.0-omx \
+    gstreamer1.0-plugins-bad \
+    gstreamer1.0-plugins-base \
+    gstreamer1.0-plugins-base-alsa \
+    gstreamer1.0-plugins-good \
+    gstreamer1.0-plugins-ugly \
+    x264 \
+"
+
+SECURITY_TOOLS = " \
+    checksec \
+    nikto \
+"
+
+WIFI = " \
+    crda \
+    iw \
+    linux-firmware-rpidistro-bcm43455 \
+    wpa-supplicant \
+"
+
+WAYLAND = " \
   adwaita-icon-theme-cursors \
-  xdg-user-dirs \
-  openssh openssh-keygen openssh-sftp-server \
-  ntp ntp-tickadj \
-  procps \
-  nmap checksec nikto \
-  crda iw wpa-supplicant \
-  bluez5 bluez5-noinst-tools bluez5-obex bluez5-testtools \
-  bluealsa \
-  userland \
   weston weston-init \
-  tzdata \
+  xdg-user-dirs \
+"
+
+CORE_IMAGE_EXTRA_INSTALL += " \
+  ${ALSA} \
+  avahi-daemon \
+  ${BT} \
+  ${CORE_OS} \
+  ${EXTRA_TOOLS} \
+  ${GSTREAMER} \
+  kernel-modules \
+  omxplayer \
+  ${PYTHON_BT} \
+  ${SECURITY_TOOLS} \
+  userland \
+  vulkan-loader vulkan-tools \
+  ${WAYLAND} \
+  ${WIFI} \
 "
 
 PREFERRED_PROVIDER:jpeg = "libjpeg-turbo"
