@@ -68,7 +68,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   ntp ntp-tickadj \
   packagegroup-core-boot \
   procps \
-  term-prompt \
   tzdata \
   bluez5 \
   bluez5-dev \
