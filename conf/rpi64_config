@@ -85,6 +85,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   nmap \
   gstreamer1.0 \
   gstreamer1.0-meta-base \
+  gstreamer1.0-omx \
   gstreamer1.0-plugins-bad \
   gstreamer1.0-plugins-base \
   gstreamer1.0-plugins-base-alsa \
@@ -101,6 +102,8 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   weston weston-init \
   xdg-user-dirs \
 "
+
+LICENSE_FLAGS_WHITELIST += " commercial"
 
 PREFERRED_PROVIDER:jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER:jpeg-native = "libjpeg-turbo-native"
