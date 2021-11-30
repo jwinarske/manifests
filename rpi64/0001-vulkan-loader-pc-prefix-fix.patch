@@ -1,9 +1,8 @@
-From 508d22b6733798ddebee75a130d49c12e2bc4f72 Mon Sep 17 00:00:00 2001
+From 024a12bc4e867e5cff321a6ac6fc3262655f6723 Mon Sep 17 00:00:00 2001
 From: Joel Winarske <joel.winarske@gmail.com>
-Date: Mon, 29 Nov 2021 16:09:36 -0800
-Subject: [PATCH] vulkan-loader pc file fix
+Date: Mon, 29 Nov 2021 16:54:28 -0800
+Subject: [PATCH] vulkan-loader pc prefix fix
 
-Signed-off-by: Joel Winarske <joel.winarske@gmail.com>
 ---
  .../0001-vulkan.pc-cross-compile-fix.patch    | 28 +++++++++++++++++++
  .../vulkan/vulkan-loader_1.2.182.0.bb         |  1 +
@@ -45,16 +44,17 @@ index 0000000000..5a4288d071
 +2.31.1
 +
 diff --git a/meta/recipes-graphics/vulkan/vulkan-loader_1.2.182.0.bb b/meta/recipes-graphics/vulkan/vulkan-loader_1.2.182.0.bb
-index 41632f25ce..89ece8d6f4 100644
+index a36fa1f844..a84bf9f0d1 100644
 --- a/meta/recipes-graphics/vulkan/vulkan-loader_1.2.182.0.bb
 +++ b/meta/recipes-graphics/vulkan/vulkan-loader_1.2.182.0.bb
 @@ -10,6 +10,7 @@ SECTION = "libs"
  LICENSE = "Apache-2.0"
  LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=7dbefed23242760aa3475ee42801c5ac"
- SRC_URI = "git://github.com/KhronosGroup/Vulkan-Loader.git;branch=master;protocol=https \
+ SRC_URI = "git://github.com/KhronosGroup/Vulkan-Loader.git \
 +           file://0001-vulkan.pc-cross-compile-fix.patch \
             "
  SRCREV = "1896143df69d439b0933c1bb485f5a4587bdf2dc"
  
 -- 
 2.31.1
+
