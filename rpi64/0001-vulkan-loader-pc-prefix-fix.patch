@@ -42,6 +42,7 @@ index 0000000000..5a4288d071
 + Description: Vulkan Loader
 +--
 +2.31.1
++
 diff --git a/meta/recipes-graphics/vulkan/vulkan-loader_1.2.182.0.bb b/meta/recipes-graphics/vulkan/vulkan-loader_1.2.182.0.bb
 index a36fa1f844..a84bf9f0d1 100644
 --- a/meta/recipes-graphics/vulkan/vulkan-loader_1.2.182.0.bb
