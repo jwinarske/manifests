@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-License-Identifier: Apache-2.0
+SPDX-FileCopyrightText: Huawei Inc.
+-->
+<manifest>
+	<notice>
+
+		Thank you for building a development version of Oniro Project.
+		This manifest file automatically follows changes in certain
+		layers and is suitable for development of Oniro Project itself.
+
+		Check out Oniro Project documentation at https://docs.oniroproject.org
+
+		Meet the developers on mattermost at https://chat.booting.oniroproject.org/
+
+	</notice>
+
+	<remote name="eclipse" fetch="https://gitlab.eclipse.org/eclipse" />
+	<remote name="github" fetch="https://github.com" />
+	<remote name="oniro-booting" fetch="https://booting.oniroproject.org" />
+	<remote name="yocto" fetch="git://git.yoctoproject.org" />
+	<remote name="openembedded" fetch="git://git.openembedded.org" />
+	<remote name="seco" fetch="https://git.seco.com" />
+
+	<project name="bitbake" remote="openembedded" revision="f0fc0fe94161d4dd4f34df8426222ac590ef6736" path="bitbake" />
+	<project name="openembedded-core" remote="openembedded" revision="b1bb4e2d73985c6e8cf03b0fea94e8b739648cf7" path="oe-core" />
+	<project name="meta-openembedded" remote="openembedded" revision="8b8bfbcadf188cd5b234358590764e20d03d7861" path="meta-openembedded" />
+	<project name="aehs29/meta-freertos" remote="github" revision="98a6838261d36b8f79c5fbae1736492169727a1e" path="meta-freertos" />
+	<project name="meta-intel" remote="yocto" revision="2bdc432840d0f862fec965281540dbe91d8eb565" path="meta-intel" />
+	<project name="pub/intel/yocto/meta-seco-intel" remote="seco" revision="65a673560211b11986db5785c70254fad190785f" path="meta-seco-intel" />
+	<project name="meta-freescale" remote="yocto" revision="04a7bbdddfe9cfd41e93f127fed41293cde79741" path="meta-freescale" />
+	<project name="pub/i.mx/yocto/5.x/meta-seco-imx" remote="seco" revision="ef8748bbe79817f53153e813acae6ea006775b59" path="meta-seco-imx" />
+	<project name="meta-raspberrypi" remote="yocto" revision="bc10842957212450023adfcbad5a73c21b28fce7" path="meta-raspberrypi" />
+	<project name="meta-security" remote="yocto" revision="6cc8dde794bd56077e0e2eb5d303e958cc553b68" path="meta-security" />
+	<project name="rauc/meta-rauc" remote="github" revision="9e206d6998b363315791be144815a4eabc3fe5a8" path="meta-rauc" />
+	<project name="riscv/meta-riscv" remote="github" revision="b3550462b3e827259efbc8872ead6ecc0e30c7fb" path="meta-riscv" />
+
+	<!--
+		All entries above are pinned to a specific revision and updated manually.
+
+		For the entries below this comment it depends on the phase of development
+		the project is in at the given time. In normal development mode it would be
+		"floating" entries, that follow branches and not precise revisions.
+
+		When the release process is entered these would be pinned as well. Most
+		likely to a git tag in the repository.
+	-->
+
+	<project name="oniro-core/oniro" remote="eclipse" revision="kirkstone" path="oniro">
+		<linkfile src="README.md" dest="README.md"/>
+	</project>
+	<project name="oniro-core/meta-clang" remote="eclipse" revision="oniro/kirkstone" path="meta-clang" />
+	<project name="oniro-core/meta-zephyr" remote="eclipse" revision="oniro/kirkstone" path="meta-zephyr" />
+	<project name="oniro-core/docs" remote="eclipse" revision="main" path="docs" />
+	<project name="distro/governance/ip-policy" remote="oniro-booting" revision="main" path="ip-policy" />
+</manifest>
