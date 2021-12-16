@@ -54,10 +54,9 @@ KERNEL_MODULE_AUTOLOAD_raspberrypi4-64 += "i2c-dev i2c-bcm2708"
 DISPMANX_OFFLINE = "1"
 LINUX_KERNEL_TYPE = "preempt-rt"
 CMDLINE_DEBUG = "quiet"
-PREFERRED_VERSION_linux-raspberrypi = "5.4.%"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
-  kernel-modules
+  kernel-modules \
   packagegroup-core-selinux \
   avahi-daemon \
   vulkan-loader vulkan-tools \
@@ -65,5 +64,4 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   xdg-user-dirs \
 "
 
-PREFERRED_VERSION_pipewire = "0.3.22"
 EOT
