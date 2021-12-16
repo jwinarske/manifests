@@ -1,23 +1,23 @@
-From 7c6cd82ca16d6781943aab64a4b0258ba6e5cebf Mon Sep 17 00:00:00 2001
+From 81f8dd7ed2f51e3379e238d916b8d9b080472f96 Mon Sep 17 00:00:00 2001
 From: Joel Winarske <joel.winarske@gmail.com>
-Date: Wed, 3 Nov 2021 21:51:46 -0700
+Date: Thu, 16 Dec 2021 13:14:27 -0800
 Subject: [PATCH] rpi mesa vulkan broadcom override
 
+Signed-off-by: Joel Winarske <joel.winarske@gmail.com>
 ---
  recipes-graphics/mesa/mesa_%.bbappend | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/recipes-graphics/mesa/mesa_%.bbappend b/recipes-graphics/mesa/mesa_%.bbappend
-index 09c8db7..7000ead 100644
+index eaa46f2..ad506ed 100644
 --- a/recipes-graphics/mesa/mesa_%.bbappend
 +++ b/recipes-graphics/mesa/mesa_%.bbappend
 @@ -2,5 +2,5 @@
  # With oe-core commit 8509e2e1a87578882b71948ccef3b50ccf1228b3 dri3 is set
  # as default. To state out clearly that Raspi needs dri3 and to avoid surprises
  # in case oe-core changes this default, we set dri3 explicitly.
--PACKAGECONFIG:append:rpi = " gallium vc4 v3d kmsro ${@bb.utils.contains('DISTRO_FEATURES', 'x11 opengl', 'x11 dri3', '', d)}"
-+PACKAGECONFIG:append:rpi = " gallium vc4 v3d kmsro ${@bb.utils.contains('DISTRO_FEATURES', 'x11 opengl', 'x11 dri3', '', d)} ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', 'vulkan broadcom', '', d)}"
- DRIDRIVERS:class-target:rpi = ""
+-PACKAGECONFIG_append_rpi = " gallium vc4 v3d kmsro ${@bb.utils.contains('DISTRO_FEATURES', 'x11 opengl', 'x11 dri3', '', d)}"
++PACKAGECONFIG_append_rpi = " gallium vc4 v3d kmsro ${@bb.utils.contains('DISTRO_FEATURES', 'x11 opengl', 'x11 dri3', '', d)} ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', 'vulkan broadcom', '', d)}"
+ DRIDRIVERS_class-target_rpi = ""
 -- 
 2.31.1
-
