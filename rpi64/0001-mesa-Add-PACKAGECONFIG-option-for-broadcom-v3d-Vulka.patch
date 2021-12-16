@@ -1,0 +1,29 @@
+From d2773e50495d838062dfbe10925eb9e91a44ee9e Mon Sep 17 00:00:00 2001
+From: Joel Winarske <joel.winarske@gmail.com>
+Date: Thu, 16 Dec 2021 13:05:37 -0800
+Subject: [PATCH] mesa: Add PACKAGECONFIG option for broadcom v3d Vulkan driver
+
+Enables building the v3d Vulkan driver.
+
+Signed-off-by: Joel Winarske <joel.winarske@gmail.com>
+---
+ meta/recipes-graphics/mesa/mesa.inc | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/meta/recipes-graphics/mesa/mesa.inc b/meta/recipes-graphics/mesa/mesa.inc
+index bfab19e773..b61b8c031c 100644
+--- a/meta/recipes-graphics/mesa/mesa.inc
++++ b/meta/recipes-graphics/mesa/mesa.inc
+@@ -95,7 +95,8 @@ PACKAGECONFIG[dri3] = "-Ddri3=true, -Ddri3=false, xorgproto libxshmfence"
+ VULKAN_DRIVERS = ""
+ VULKAN_DRIVERS_append_x86_class-target = ",intel"
+ VULKAN_DRIVERS_append_x86-64_class-target = ",intel"
+-PACKAGECONFIG[vulkan] = "-Dvulkan-drivers=${VULKAN_DRIVERS}, -Dvulkan-drivers='',"
++VULKAN_DRIVERS_append = "${@bb.utils.contains('PACKAGECONFIG', 'broadcom', ',broadcom', '', d)}"
++PACKAGECONFIG[vulkan] = "-Dvulkan-drivers=${@strip_comma('${VULKAN_DRIVERS}')}, -Dvulkan-drivers='',"
+ 
+ PACKAGECONFIG[opengl] = "-Dopengl=true, -Dopengl=false"
+ 
+-- 
+2.31.1
+
