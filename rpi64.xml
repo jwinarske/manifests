@@ -10,16 +10,15 @@
   </project>
   
   <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="dunfell"/>
-  <project name="meta-qt5/meta-qt5" path="sources/meta-qt5" remote="github" revision="b4d24d70aca75791902df5cd59a4f4a54aa4a125"/>
-  <project name="meta-raspberrypi" path="sources/meta-raspberrypi" remote="yocto" revision="dunfell"/>
-  <project name="meta-rust/meta-rust" path="sources/meta-rust" remote="github" revision="494d879a1d337cda5b3a19406cabe46fcd3aee76"/>
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="dunfell"/>
-  <project name="meta-selinux" path="sources/meta-selinux" remote="yocto" revision="10187c3ceeb38acdfb92e8f3d8dd735e2bf485e1"/>
+  <project name="meta-selinux" path="sources/meta-selinux" remote="yocto" revision="dunfell"/>
   <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="dunfell"/>
   <project name="poky" path="sources/poky" remote="yocto" revision="dunfell"/>
 
-  <project name="jumpnow/meta-jumpnow" path="sources/meta-jumpnow" remote="github" revision="b3995636741be0d219a50035c98ded8b48590888"/>
+  <project name="agherzan/meta-raspberrypi.git" path="sources/meta-raspberrypi" remote="github" revision="master"/>
+  <project name="jumpnow/meta-jumpnow" path="sources/meta-jumpnow" remote="github" revision="dunfell"/>
   <project name="kraj/meta-clang" path="sources/meta-clang" remote="github" revision="dunfell"/>
-  <project name="jwinarske/meta-flutter.git" path="sources/meta-flutter" remote="github" revision="dunfell"/>
+  <project name="meta-flutter/meta-flutter.git" path="sources/meta-flutter" remote="github" revision="dunfell"/>
+  <project name="jwinarske/meta-vulkan.git" path="sources/meta-vulkan" remote="github" revision="dunfell"/>
 
 </manifest>

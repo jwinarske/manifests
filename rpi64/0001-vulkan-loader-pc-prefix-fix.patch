@@ -1,0 +1,60 @@
+From 024a12bc4e867e5cff321a6ac6fc3262655f6723 Mon Sep 17 00:00:00 2001
+From: Joel Winarske <joel.winarske@gmail.com>
+Date: Mon, 29 Nov 2021 16:54:28 -0800
+Subject: [PATCH] vulkan-loader pc prefix fix
+
+---
+ .../0001-vulkan.pc-cross-compile-fix.patch    | 28 +++++++++++++++++++
+ .../vulkan/vulkan-loader_1.2.182.0.bb         |  1 +
+ 2 files changed, 29 insertions(+)
+ create mode 100644 meta/recipes-graphics/vulkan/vulkan-loader/0001-vulkan.pc-cross-compile-fix.patch
+
+diff --git a/meta/recipes-graphics/vulkan/vulkan-loader/0001-vulkan.pc-cross-compile-fix.patch b/meta/recipes-graphics/vulkan/vulkan-loader/0001-vulkan.pc-cross-compile-fix.patch
+new file mode 100644
+index 0000000000..5a4288d071
+--- /dev/null
++++ b/meta/recipes-graphics/vulkan/vulkan-loader/0001-vulkan.pc-cross-compile-fix.patch
+@@ -0,0 +1,28 @@
++From a71ac8d7081b87c45399192016fdc9d700b725c6 Mon Sep 17 00:00:00 2001
++From: Joel Winarske <joel.winarske@gmail.com>
++Date: Mon, 29 Nov 2021 16:03:21 -0800
++Subject: [PATCH] vulkan.pc cross-compile fix
++
++Signed-off-by: Joel Winarske <joel.winarske@gmail.com>
++---
++ loader/vulkan.pc.in | 6 +++---
++ 1 file changed, 3 insertions(+), 3 deletions(-)
++
++diff --git a/loader/vulkan.pc.in b/loader/vulkan.pc.in
++index 44049ee34..153815577 100644
++--- a/loader/vulkan.pc.in
+++++ b/loader/vulkan.pc.in
++@@ -1,7 +1,7 @@
++ prefix=@CMAKE_INSTALL_PREFIX@
++-exec_prefix=@CMAKE_INSTALL_PREFIX@
++-libdir=@CMAKE_INSTALL_FULL_LIBDIR@
++-includedir=@CMAKE_INSTALL_FULL_INCLUDEDIR@
+++exec_prefix=${prefix}
+++libdir=${exec_prefix}/@CMAKE_INSTALL_LIBDIR@
+++includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
++
++ Name: @CMAKE_PROJECT_NAME@
++ Description: Vulkan Loader
++--
++2.31.1
++
+diff --git a/meta/recipes-graphics/vulkan/vulkan-loader_1.2.182.0.bb b/meta/recipes-graphics/vulkan/vulkan-loader_1.2.182.0.bb
+index a36fa1f844..a84bf9f0d1 100644
+--- a/meta/recipes-graphics/vulkan/vulkan-loader_1.2.182.0.bb
++++ b/meta/recipes-graphics/vulkan/vulkan-loader_1.2.182.0.bb
+@@ -10,6 +10,7 @@ SECTION = "libs"
+ LICENSE = "Apache-2.0"
+ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=7dbefed23242760aa3475ee42801c5ac"
+ SRC_URI = "git://github.com/KhronosGroup/Vulkan-Loader.git \
++           file://0001-vulkan.pc-cross-compile-fix.patch \
+            "
+ SRCREV = "1896143df69d439b0933c1bb485f5a4587bdf2dc"
+ 
+-- 
+2.31.1
+

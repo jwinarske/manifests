@@ -1,0 +1,24 @@
+From c319ea60713e9c53f6c08491fb187d970e4269e6 Mon Sep 17 00:00:00 2001
+From: Joel Winarske <joel.winarske@gmail.com>
+Date: Mon, 29 Nov 2021 11:05:58 -0800
+Subject: [PATCH] Add sys_root to properties section
+
+Signed-off-by: Joel Winarske <joel.winarske@gmail.com>
+---
+ meta/classes/meson.bbclass | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/meta/classes/meson.bbclass b/meta/classes/meson.bbclass
+index e124d18144..be9f53ed73 100644
+--- a/meta/classes/meson.bbclass
++++ b/meta/classes/meson.bbclass
+@@ -63,6 +63,7 @@ cpp_link_args = ${@meson_array('LDFLAGS', d)}
+ [properties]
+ needs_exe_wrapper = true
+ gtkdoc_exe_wrapper = '${B}/gtkdoc-qemuwrapper'
++sys_root = '${STAGING_DIR_TARGET}'
+ 
+ [host_machine]
+ system = '${@meson_operating_system('HOST_OS', d)}'
+-- 
+2.31.1
