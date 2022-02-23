@@ -10,7 +10,7 @@
   </project>
   
   <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="honister"/>
-  <project name="meta-raspberrypi" path="sources/meta-raspberrypi" remote="yocto" revision="master"/>
+  <project name="agherzan/meta-raspberrypi" path="sources/meta-raspberrypi" remote="github" revision="honister"/>
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="honister"/>
   <project name="meta-selinux" path="sources/meta-selinux" remote="yocto" revision="honister"/>
   <project name="poky" path="sources/poky" remote="yocto" revision="honister"/>
