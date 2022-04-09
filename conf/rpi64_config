@@ -16,7 +16,9 @@ bitbake-layers add-layer \
 ../sources/meta-selinux \
 ../sources/meta-clang \
 ../sources/meta-flutter \
-../sources/meta-vulkan
+../sources/meta-vulkan \
+../sources/meta-rust \
+../sources/meta-webthings
 
 sed -i "s|MACHINE ??= \"qemux86-64\"|MACHINE ?= \"$MACHINE\"|g" conf/local.conf
 
