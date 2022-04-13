@@ -1,0 +1,34 @@
+diff --git a/lib/bb/fetch2/npm.py b/lib/bb/fetch2/npm.py
+index 47898509..d61c3675 100644
+--- a/lib/bb/fetch2/npm.py
++++ b/lib/bb/fetch2/npm.py
+@@ -92,6 +92,8 @@ class NpmEnvironment(object):
+             if not workdir:
+                 workdir = tmpdir
+ 
++            cfg = open(cfgfile, "a")
++            
+             def _run(cmd):
+                 cmd = "NPM_CONFIG_USERCONFIG=%s " % cfgfile + cmd
+                 cmd = "NPM_CONFIG_GLOBALCONFIG=%s " % cfgfile + cmd
+@@ -99,15 +101,18 @@ class NpmEnvironment(object):
+ 
+             if self.configs:
+                 for key, value in self.configs:
+-                    _run("npm config set %s %s" % (key, shlex.quote(value)))
++                    cfg.write("%s=%s\n" % (key, shlex.quote(value)))
++                    #_run("npm config set %s %s" % (key, shlex.quote(value)))
+ 
+             if configs:
+                 for key, value in configs:
+-                    _run("npm config set %s %s" % (key, shlex.quote(value)))
++                    cfg.write("%s=%s\n" % (key, shlex.quote(value)))
++                    # _run("npm config set %s %s" % (key, shlex.quote(value)))
+ 
+             if args:
+                 for key, value in args:
+                     cmd += " --%s=%s" % (key, shlex.quote(value))
++            cfg.close()
+ 
+             return _run(cmd)
+ 
