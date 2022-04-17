@@ -60,6 +60,10 @@ CMDLINE_DEBUG = "quiet"
 
 DEFAULT_TIMEZONE = "America/Los_Angeles"
 
+ENABLE_BINARY_LOCALE_GENERATION = "1"
+GLIBC_GENERATE_LOCALES = "en_GB.UTF-8 en_US.UTF-8"
+IMAGE_LINGUAS ?= "en-us"
+
 CORE_IMAGE_EXTRA_INSTALL += " \
   kernel-modules \
   packagegroup-core-selinux \
