@@ -58,6 +58,8 @@ DISPMANX_OFFLINE = "1"
 LINUX_KERNEL_TYPE = "preempt-rt"
 CMDLINE_DEBUG = "quiet"
 
+DEFAULT_TIMEZONE = "America/Los_Angeles"
+
 CORE_IMAGE_EXTRA_INSTALL += " \
   kernel-modules \
   packagegroup-core-selinux \
@@ -65,6 +67,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   vulkan-loader vulkan-tools \
   adwaita-icon-theme-cursors \
   xdg-user-dirs \
+  tzdata-core \
 "
 
 EOT
