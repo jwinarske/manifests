@@ -13,7 +13,8 @@ bitbake-layers add-layer \
 ../sources/meta-openembedded/meta-python \
 ../sources/meta-openembedded/meta-perl \
 ../sources/meta-security \
-../sources/meta-clang
+../sources/meta-clang \
+../sources/meta-webthings
 
 bitbake-layers add-layer \
 ../sources/meta-flutter
@@ -57,7 +58,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   avahi-daemon \
   kernel-modules \
   userland \
-  openssh openssh-keygen openssh-sftp-server \  
   ntp ntp-tickadj \
   procps \
   bluez5 \
@@ -87,6 +87,9 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   tzdata-core \
   tzdata-americas \
   xkeyboard-config \
+  webthings-gateway \
+  webthings-rust-examples \
+  webthings-registration-server \
 "
 
 LICENSE_FLAGS_ACCEPTED += " commercial"
