@@ -58,7 +58,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   kernel-modules \
   userland \
   ntp ntp-tickadj \
-  packagegroup-core-boot \
   procps \
   bluez5 \
   bluez5-dev \
@@ -66,7 +65,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   bluez5-obex \
   bluez5-testtools \
   bluealsa \
-  python3-pybluez \
   alsa-lib \
   alsa-conf \
   alsa-state \
@@ -81,10 +79,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   gstreamer1.0-plugins-good \
   gstreamer1.0-plugins-ugly \
   x264 \
-  checksec \
-  nikto \
-  crda \
-  iw \
   wpa-supplicant \
   adwaita-icon-theme-cursors \
   xdg-user-dirs \
