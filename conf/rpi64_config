@@ -16,7 +16,6 @@ bitbake-layers add-layer \
 ../sources/meta-clang
 
 bitbake-layers add-layer \
-../sources/meta-vulkan \
 ../sources/meta-flutter
 
 sed -i "s|MACHINE ??= \"qemux86-64\"|MACHINE ?= \"$MACHINE\"|g" conf/local.conf
@@ -29,7 +28,7 @@ BBMASK = "meta-networking/recipes-kernel/wireguard"
 
 INIT_MANAGER = "systemd"
 DISTRO_FEATURES:remove = "sysvinit x11"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan wayland pam"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland pam"
 # DISTRO_FEATURES:append = " pam selinux"
 
 COMBINED_FEATURES += "alsa "
@@ -58,7 +57,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   avahi-daemon \
   kernel-modules \
   userland \
-  vulkan-loader vulkan-tools \
   openssh openssh-keygen openssh-sftp-server \
   ntp ntp-tickadj \
   packagegroup-core-boot \
@@ -93,7 +91,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   iw \
   wpa-supplicant \
   adwaita-icon-theme-cursors \
-  weston weston-init \
   xdg-user-dirs \
 "
 
