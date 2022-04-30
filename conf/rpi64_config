@@ -57,6 +57,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   avahi-daemon \
   kernel-modules \
   userland \
+  openssh openssh-keygen openssh-sftp-server \  
   ntp ntp-tickadj \
   procps \
   bluez5 \
