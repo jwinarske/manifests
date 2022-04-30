@@ -87,7 +87,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   tzdata-core \
   tzdata-americas \
   xkeyboard-config \
-  webthings-gateway \
   webthings-registration-server \
   webthing-rust-examples \
 "
