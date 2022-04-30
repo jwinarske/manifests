@@ -88,8 +88,8 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   tzdata-americas \
   xkeyboard-config \
   webthings-gateway \
-  webthings-rust-examples \
   webthings-registration-server \
+  webthing-rust-examples \
 "
 
 LICENSE_FLAGS_ACCEPTED += " commercial"
