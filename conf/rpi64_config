@@ -83,7 +83,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   wpa-supplicant \
   adwaita-icon-theme-cursors \
   xdg-user-dirs \
-  network-manager \
+  networkmanager \
   tzdata-core \
   tzdata-americas \
   xkeyboard-config \
