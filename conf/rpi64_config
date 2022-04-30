@@ -27,21 +27,16 @@ INHERIT:append = " rm_work"
 
 BBMASK = "meta-networking/recipes-kernel/wireguard"
 
-DISTRO_FEATURES:remove = "sysvinit x11"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan wayland pam systemd"
-# DISTRO_FEATURES:append = " pam selinux"
-
 INIT_MANAGER = "systemd"
-VIRTUAL-RUNTIME:init_manager = "systemd"
-VIRTUAL-RUNTIME:initscripts = ""
-
-DISTRO_FEATURES_BACKFILL_CONSIDERED = ""
+DISTRO_FEATURES:remove = "sysvinit x11"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan wayland pam"
+# DISTRO_FEATURES:append = " pam selinux"
 
 COMBINED_FEATURES += "alsa "
 MACHINE_FEATURES:remove = "apm"
 
 LINUX_KERNEL_TYPE = "preempt-rt"
-PREFERRED_VERSION:linux-raspberrypi = "5.10.%"
+# PREFERRED_VERSION:linux-raspberrypi = "5.10.%"
 # CMDLINE_DEBUG = "quiet"
 
 GPU_MEM = "256"
@@ -102,7 +97,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   xdg-user-dirs \
 "
 
-LICENSE_FLAGS_WHITELIST += " commercial"
+LICENSE_FLAGS_ACCEPTED += " commercial"
 
 PREFERRED_PROVIDER:jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER:jpeg-native = "libjpeg-turbo-native"
