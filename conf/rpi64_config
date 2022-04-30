@@ -57,11 +57,9 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   avahi-daemon \
   kernel-modules \
   userland \
-  openssh openssh-keygen openssh-sftp-server \
   ntp ntp-tickadj \
   packagegroup-core-boot \
   procps \
-  tzdata \
   bluez5 \
   bluez5-dev \
   bluez5-noinst-tools \
@@ -74,8 +72,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   alsa-state \
   alsa-utils \
   alsa-utils-scripts \
-  canutils \
-  nmap \
   gstreamer1.0 \
   gstreamer1.0-meta-base \
   gstreamer1.0-omx \
@@ -92,6 +88,10 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   wpa-supplicant \
   adwaita-icon-theme-cursors \
   xdg-user-dirs \
+  network-manager \
+  tzdata-core \
+  tzdata-americas \
+  xkeyboard-config \
 "
 
 LICENSE_FLAGS_ACCEPTED += " commercial"
