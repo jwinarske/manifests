@@ -25,12 +25,12 @@ cat <<EOT >> conf/local.conf
 
 INHERIT:append = " rm_work"
 
-# BBMASK = "meta-networking/recipes-kernel/wireguard"
+BBMASK = "meta-networking/recipes-kernel/wireguard"
 
 INIT_MANAGER = "systemd"
-DISTRO_FEATURES:remove = "sysvinit x11"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland pam"
-#DISTRO_FEATURES:append = " pam selinux"
+DISTRO_FEATURES:remove = "sysvinit x11 usbgadget"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland"
+#DISTRO_FEATURES:append = " pam security seccomp"
 
 COMBINED_FEATURES += "alsa "
 MACHINE_FEATURES:remove = "apm"
@@ -48,7 +48,7 @@ DISABLE_SPLASH = "1"
 ENABLE_SPI_BUS = "1"
 
 ENABLE_I2C = "1"
-KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
+KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708 asix"
 
 #ENABLE_UART = "1"
 # SERIAL_CONSOLES = "115200;ttyAMA0"
@@ -84,7 +84,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   tzdata-core \
   tzdata-americas \
   xkeyboard-config \
-  webthings-registration-server \
   webthing-rust-examples \
 "
 
