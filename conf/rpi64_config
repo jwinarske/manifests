@@ -25,18 +25,17 @@ cat <<EOT >> conf/local.conf
 
 INHERIT:append = " rm_work"
 
-BBMASK = "meta-networking/recipes-kernel/wireguard"
+# BBMASK = "meta-networking/recipes-kernel/wireguard"
 
 INIT_MANAGER = "systemd"
 DISTRO_FEATURES:remove = "sysvinit x11"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland pam"
-# DISTRO_FEATURES:append = " pam selinux"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland"
+DISTRO_FEATURES:append = " pam selinux"
 
 COMBINED_FEATURES += "alsa "
 MACHINE_FEATURES:remove = "apm"
 
 LINUX_KERNEL_TYPE = "preempt-rt"
-# PREFERRED_VERSION:linux-raspberrypi = "5.10.%"
 # CMDLINE_DEBUG = "quiet"
 
 GPU_MEM = "256"
@@ -48,10 +47,10 @@ DISABLE_SPLASH = "1"
 
 ENABLE_SPI_BUS = "1"
 
-ENABLE_I2C = "0"
+ENABLE_I2C = "1"
 KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
 
-ENABLE_UART = "1"
+#ENABLE_UART = "1"
 # SERIAL_CONSOLES = "115200;ttyAMA0"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
@@ -82,7 +81,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   x264 \
   adwaita-icon-theme-cursors \
   xdg-user-dirs \
-  networkmanager \
   tzdata-core \
   tzdata-americas \
   xkeyboard-config \
