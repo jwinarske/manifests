@@ -30,7 +30,7 @@ BBMASK = "meta-networking/recipes-kernel/wireguard"
 
 INIT_MANAGER = "systemd"
 DISTRO_FEATURES:remove = "sysvinit x11 usbgadget"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl pam wayland wifi"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland wifi pam security"
 
 COMBINED_FEATURES += "alsa "
 MACHINE_FEATURES:remove = "apm"
