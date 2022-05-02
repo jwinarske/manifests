@@ -47,12 +47,20 @@ DISABLE_SPLASH = "1"
 ENABLE_SPI_BUS = "1"
 
 ENABLE_I2C = "1"
-KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708 asix"
+KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
 
-#ENABLE_UART = "1"
+ENABLE_UART = "0"
 # SERIAL_CONSOLES = "115200;ttyAMA0"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
+  adwaita-icon-theme-cursors \
+  xdg-user-dirs \
+  tzdata-core \
+  tzdata-americas \
+  xkeyboard-config \
+  packagegroup-base \
+  kernel-modules \
+  pipewire \
   avahi-daemon \
   userland \
   ntp ntp-tickadj \
@@ -77,14 +85,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   gstreamer1.0-plugins-good \
   gstreamer1.0-plugins-ugly \
   x264 \
-  adwaita-icon-theme-cursors \
-  xdg-user-dirs \
-  tzdata-core \
-  tzdata-americas \
-  xkeyboard-config \
   webthing-rust-examples \
-  packagegroup-base \
-  kernel-modules \
   raspi-gpio \
   rpio \
   rpi-gpio \
@@ -92,7 +93,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   connman \
   connman-client \
   wireless-regdb-static \
-  wpa-supplicant \
 "
 
 LICENSE_FLAGS_ACCEPTED += " commercial"
