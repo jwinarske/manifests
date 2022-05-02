@@ -93,6 +93,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   connman \
   connman-client \
   wireless-regdb-static \
+  wpa-supplicant \
 "
 
 LICENSE_FLAGS_ACCEPTED += " commercial"
