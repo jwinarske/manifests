@@ -30,7 +30,7 @@ BBMASK = "meta-networking/recipes-kernel/wireguard"
 INIT_MANAGER = "systemd"
 DISTRO_FEATURES:remove = "sysvinit x11 usbgadget"
 DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland"
-#DISTRO_FEATURES:append = " pam security seccomp"
+#DISTRO_FEATURES:append = " pam"
 
 COMBINED_FEATURES += "alsa "
 MACHINE_FEATURES:remove = "apm"
@@ -55,7 +55,6 @@ KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708 asix"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
   avahi-daemon \
-  kernel-modules \
   userland \
   ntp ntp-tickadj \
   procps \
@@ -85,6 +84,15 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   tzdata-americas \
   xkeyboard-config \
   webthing-rust-examples \
+  packagegroup-base \
+  kernel-modules \
+  raspi-gpio \
+  rpio \
+  rpi-gpio \
+  pi-blaster \
+  connman \
+  connman-client \
+  wireless-regdb-static \
 "
 
 LICENSE_FLAGS_ACCEPTED += " commercial"
