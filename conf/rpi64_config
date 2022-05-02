@@ -29,8 +29,8 @@ INHERIT:append = " rm_work"
 
 INIT_MANAGER = "systemd"
 DISTRO_FEATURES:remove = "sysvinit x11"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland"
-DISTRO_FEATURES:append = " pam selinux"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland pam"
+#DISTRO_FEATURES:append = " pam selinux"
 
 COMBINED_FEATURES += "alsa "
 MACHINE_FEATURES:remove = "apm"
