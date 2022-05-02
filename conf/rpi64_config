@@ -52,7 +52,7 @@ ENABLE_UART = "1"
 # SERIAL_CONSOLES = "115200;ttyAMA0"
 
 IMAGE_INSTALL:append = " \
-  gpiod-tools i2c-tools spidev-test \
+  libgpiod-tools i2c-tools spidev-test can-utils \
   networkmanager \
   adwaita-icon-theme-cursors \
   xdg-user-dirs \
