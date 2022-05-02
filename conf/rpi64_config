@@ -36,9 +36,9 @@ COMBINED_FEATURES += "alsa "
 MACHINE_FEATURES:remove = "apm"
 
 LINUX_KERNEL_TYPE = "preempt-rt"
-# CMDLINE_DEBUG = "quiet"
+CMDLINE_DEBUG = "quiet"
 
-GPU_MEM = "256"
+GPU_MEM = "128"
 DISPMANX_OFFLINE = "1"
 DISABLE_OVERSCAN = "1"
 
@@ -46,14 +46,14 @@ DISABLE_RPI_BOOT_LOGO = "1"
 DISABLE_SPLASH = "1"
 
 ENABLE_SPI_BUS = "1"
-
 ENABLE_I2C = "1"
 KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
-
 ENABLE_UART = "1"
 # SERIAL_CONSOLES = "115200;ttyAMA0"
 
 IMAGE_INSTALL:append = " \
+  gpiod-tools i2c-tools spidev-test \
+  networkmanager \
   adwaita-icon-theme-cursors \
   xdg-user-dirs \
   tzdata-core \
@@ -61,8 +61,6 @@ IMAGE_INSTALL:append = " \
   xkeyboard-config \
   default-language-en-us-utf8 \
   kernel-modules \
-  pipewire \
-  networkmanager \
   wireless-regdb-static \
   avahi-daemon \
   userland \
