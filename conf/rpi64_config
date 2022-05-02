@@ -51,9 +51,11 @@ KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
 ENABLE_UART = "1"
 # SERIAL_CONSOLES = "115200;ttyAMA0"
 
+IMAGE_FEATURES:append = " splash package-management ssh-server-dropbear hwcodecs weston"
+QB_MEM = "-m 512"
+
 IMAGE_INSTALL:append = " \
   libgpiod-tools i2c-tools spidev-test can-utils \
-  networkmanager \
   adwaita-icon-theme-cursors \
   xdg-user-dirs \
   tzdata-core \
@@ -87,10 +89,6 @@ IMAGE_INSTALL:append = " \
   gstreamer1.0-plugins-ugly \
   x264 \
   webthing-rust-examples \
-  raspi-gpio \
-  rpio \
-  rpi-gpio \
-  pi-blaster \
 "
 
 LICENSE_FLAGS_ACCEPTED += " commercial"
