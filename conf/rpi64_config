@@ -14,6 +14,7 @@ bitbake-layers add-layer \
 ../sources/meta-openembedded/meta-perl \
 ../sources/meta-security \
 ../sources/meta-clang \
+../sources/meta-integration-extras \
 ../sources/meta-webthings
 
 bitbake-layers add-layer \
@@ -52,15 +53,17 @@ KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
 ENABLE_UART = "0"
 # SERIAL_CONSOLES = "115200;ttyAMA0"
 
-CORE_IMAGE_EXTRA_INSTALL += " \
+IMAGE_INSTALL:append = " \
   adwaita-icon-theme-cursors \
   xdg-user-dirs \
   tzdata-core \
   tzdata-americas \
   xkeyboard-config \
-  packagegroup-base \
+  default-language-en-us-utf8 \
   kernel-modules \
   pipewire \
+  networkmanager \
+  wireless-regdb-static \
   avahi-daemon \
   userland \
   ntp ntp-tickadj \
@@ -90,9 +93,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
   rpio \
   rpi-gpio \
   pi-blaster \
-  connman \
-  connman-client \
-  wireless-regdb-static \
 "
 
 LICENSE_FLAGS_ACCEPTED += " commercial"
