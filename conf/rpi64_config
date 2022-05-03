@@ -18,6 +18,7 @@ bitbake-layers add-layer \
 ../sources/meta-webthings
 
 bitbake-layers add-layer \
+../sources/meta-flutter-rpi \
 ../sources/meta-flutter
 
 sed -i "s|MACHINE ??= \"qemux86-64\"|MACHINE ?= \"$MACHINE\"|g" conf/local.conf
@@ -30,7 +31,7 @@ BBMASK = "meta-networking/recipes-kernel/wireguard"
 
 INIT_MANAGER = "systemd"
 DISTRO_FEATURES:remove = "sysvinit x11 usbgadget"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland wifi pam security"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland pam security"
 
 COMBINED_FEATURES += "alsa "
 
@@ -49,38 +50,6 @@ ENABLE_I2C = "1"
 KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
 ENABLE_UART = "1"
 # SERIAL_CONSOLES = "115200;ttyAMA0"
-
-
-IMAGE_INSTALL:append = " \
-  libgpiod-tools i2c-tools spidev-test can-utils \
-  kernel-modules \
-  wireless-regdb-static \
-  avahi-daemon \
-  userland \
-  ntp ntp-tickadj \
-  procps \
-  bluez5 \
-  bluez5-dev \
-  bluez5-noinst-tools \
-  bluez5-obex \
-  bluez5-testtools \
-  bluealsa \
-  alsa-lib \
-  alsa-conf \
-  alsa-state \
-  alsa-utils \
-  alsa-utils-scripts \
-  gstreamer1.0 \
-  gstreamer1.0-meta-base \
-  gstreamer1.0-omx \
-  gstreamer1.0-plugins-bad \
-  gstreamer1.0-plugins-base \
-  gstreamer1.0-plugins-base-alsa \
-  gstreamer1.0-plugins-good \
-  gstreamer1.0-plugins-ugly \
-  x264 \
-  webthing-rust-examples \
-"
 
 LICENSE_FLAGS_ACCEPTED += " commercial"
 
