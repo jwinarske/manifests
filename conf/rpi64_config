@@ -56,12 +56,6 @@ QB_MEM = "-m 512"
 
 IMAGE_INSTALL:append = " \
   libgpiod-tools i2c-tools spidev-test can-utils \
-  adwaita-icon-theme-cursors \
-  xdg-user-dirs \
-  tzdata-core \
-  tzdata-americas \
-  xkeyboard-config \
-  default-language-en-us-utf8 \
   kernel-modules \
   wireless-regdb-static \
   avahi-daemon \
