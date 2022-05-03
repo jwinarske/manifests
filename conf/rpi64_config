@@ -33,7 +33,6 @@ DISTRO_FEATURES:remove = "sysvinit x11 usbgadget"
 DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland wifi pam security"
 
 COMBINED_FEATURES += "alsa "
-MACHINE_FEATURES:remove = "apm"
 
 LINUX_KERNEL_TYPE = "preempt-rt"
 CMDLINE_DEBUG = "quiet"
@@ -51,8 +50,6 @@ KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
 ENABLE_UART = "1"
 # SERIAL_CONSOLES = "115200;ttyAMA0"
 
-IMAGE_FEATURES:append = " splash package-management ssh-server-dropbear hwcodecs weston"
-QB_MEM = "-m 512"
 
 IMAGE_INSTALL:append = " \
   libgpiod-tools i2c-tools spidev-test can-utils \
