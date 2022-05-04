@@ -22,38 +22,3 @@ bitbake-layers add-layer \
 ../sources/meta-flutter
 
 sed -i "s|MACHINE ??= \"qemux86-64\"|MACHINE ?= \"$MACHINE\"|g" conf/local.conf
-
-cat <<EOT >> conf/local.conf
-
-INHERIT:append = " rm_work"
-
-BBMASK = "meta-networking/recipes-kernel/wireguard"
-
-INIT_MANAGER = "systemd"
-DISTRO_FEATURES:remove = "sysvinit x11 usbgadget"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wayland pam security"
-
-COMBINED_FEATURES += "alsa "
-
-LINUX_KERNEL_TYPE = "preempt-rt"
-CMDLINE_DEBUG = "quiet"
-
-GPU_MEM = "128"
-DISPMANX_OFFLINE = "1"
-DISABLE_OVERSCAN = "1"
-
-DISABLE_RPI_BOOT_LOGO = "1"
-DISABLE_SPLASH = "1"
-
-ENABLE_SPI_BUS = "1"
-ENABLE_I2C = "1"
-KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
-ENABLE_UART = "1"
-# SERIAL_CONSOLES = "115200;ttyAMA0"
-
-LICENSE_FLAGS_ACCEPTED += " commercial"
-
-PREFERRED_PROVIDER:jpeg = "libjpeg-turbo"
-PREFERRED_PROVIDER:jpeg-native = "libjpeg-turbo-native"
-
-EOT
