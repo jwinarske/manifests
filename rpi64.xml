@@ -20,6 +20,6 @@
 
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="kirkstone"/>
   <project name="meta-selinux" path="sources/meta-selinux" remote="yocto" revision="fe742953ed154cdfa6e052334e1fa7d6cc0a68c2"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="kirkstone-next"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="kirkstone"/>
 
 </manifest>
