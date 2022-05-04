@@ -29,7 +29,7 @@ INHERIT:append = " rm_work"
 
 INIT_MANAGER = "systemd"
 DISTRO_FEATURES:remove = "sysvinit x11 usbgadget vulkan"
-DISTRO_FEATURES += "alsa bluetooth usbhost opengl wayland pam security"
+DISTRO_FEATURES += "alsa bluetooth usbhost opengl wifi wayland pam security"
 
 COMBINED_FEATURES += "alsa "
 
