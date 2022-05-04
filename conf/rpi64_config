@@ -5,6 +5,7 @@ MACHINE=$1
 source ./sources/poky/oe-init-build-env $MACHINE
 
 bitbake-layers add-layer \
+../sources/poky/meta \
 ../sources/meta-raspberrypi \
 ../sources/meta-openembedded/meta-filesystems \
 ../sources/meta-openembedded/meta-oe \
@@ -15,9 +16,7 @@ bitbake-layers add-layer \
 ../sources/meta-security \
 ../sources/meta-clang \
 ../sources/meta-integration-extras \
-../sources/meta-webthings
-
-bitbake-layers add-layer \
+../sources/meta-webthings \
 ../sources/meta-flutter-rpi \
 ../sources/meta-flutter
 
