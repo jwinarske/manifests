@@ -9,7 +9,7 @@
     <linkfile src="conf/rpi64_config" dest="setup-environment"/>
   </project>
   
-  <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="kirkstone"/>
+  <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="kirkstone-next"/>
   <project name="agherzan/meta-raspberrypi" path="sources/meta-raspberrypi" remote="github" revision="6afb32b00e509d88adce223ff64035f28015257c"/>
   <project name="kraj/meta-clang" path="sources/meta-clang" remote="github" revision="kirkstone-clang12"/>
   <project name="meta-flutter/meta-flutter.git" path="sources/meta-flutter" remote="github" revision="kirkstone"/>
@@ -20,6 +20,6 @@
 
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="kirkstone"/>
   <project name="meta-selinux" path="sources/meta-selinux" remote="yocto" revision="fe742953ed154cdfa6e052334e1fa7d6cc0a68c2"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="kirkstone"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="kirkstone-next"/>
 
 </manifest>
