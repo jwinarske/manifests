@@ -42,9 +42,28 @@ DISTRO_FEATURES:append = " seccomp"
 # OSSEC HID
 IMAGE_INSTALL:append = " ossec-hids"
 
-# Use nft in place of iptables/firewalld
-IMAGE_INSTALL:remove = "iptables firewalld"
-IMAGE_INSTALL:append = " nftables"
+# Misc
+IMAGE_INSTALL:append = " \
+    kernel-module-bridge bridge-utils \
+    openvpn \
+    systemd-analyze \
+    systemd-bash-completion \
+    coreutils \
+    curl \
+    iproute2 \
+    nftables \
+    lsof \
+    ntp ntp-tickadj \
+    procps \
+    sysfsutils \
+    tcpdump \
+    util-linux \
+    util-linux-blkid \
+    zip \
+    perl-modules \
+    python3-modules \
+    strace \
+"
 
 COMBINED_FEATURES += "alsa "
 
