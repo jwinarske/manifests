@@ -30,11 +30,18 @@ INHERIT:append = " rm_work"
 
 INIT_MANAGER = "systemd"
 DISTRO_FEATURES:remove = "sysvinit x11 usbgadget vulkan"
-DISTRO_FEATURES += "alsa bluetooth usbhost opengl wifi wayland security"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wifi wayland security"
 
 # SELinux
 DISTRO_FEATURES:append = " acl xattr pam selinux audit"
 PREFERRED_PROVIDER_virtual/refpolicy = "refpolicy-mls"
+
+# SECCOMP
+DISTRO_FEATURES:append = " seccomp"
+
+# NFT
+IMAGE_INSTALL:remove = "iptables"
+IMAGE_INSTALL:append = " nft"
 
 COMBINED_FEATURES += "alsa "
 
@@ -52,13 +59,12 @@ IMAGE_FEATURES:remove = "splash"
 ENABLE_SPI_BUS = "1"
 ENABLE_I2C = "1"
 KERNEL_MODULE_AUTOLOAD:rpi:append = " i2c-dev i2c-bcm2708"
-ENABLE_UART = "1"
+# ENABLE_UART = "1"
 # SERIAL_CONSOLES = "115200;ttyAMA0"
 
 PREFERRED_PROVIDER:libserialport = "6f9b03e"
 
 PREFERRED_PROVIDER:jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER:jpeg-native = "libjpeg-turbo-native"
-
 
 EOT
