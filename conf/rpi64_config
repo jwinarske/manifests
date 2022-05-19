@@ -39,7 +39,7 @@ PREFERRED_PROVIDER_virtual/refpolicy = "refpolicy-mls"
 COMBINED_FEATURES += "alsa "
 
 LINUX_KERNEL_TYPE = "preempt-rt"
-CMDLINE_DEBUG = "quiet"
+CMDLINE_DEBUG = "quiet selinux=1 enforcing=0"
 
 GPU_MEM = "128"
 DISPMANX_OFFLINE = "1"
@@ -60,28 +60,8 @@ PREFERRED_PROVIDER:libserialport = "6f9b03e"
 PREFERRED_PROVIDER:jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER:jpeg-native = "libjpeg-turbo-native"
 
-BBMASK = "meta-networking/recipes-kernel/wireguard"
-
 IMAGE_INSTALL:append = "\
         aide \
-	bash \
-	util-linux-agetty \
-	packagegroup-core-boot \
-	packagegroup-selinux-minimal \
 "
-
-selinux_set_labels () {
-    POL_TYPE=$(sed -n -e "s&^SELINUXTYPE[[:space:]]*=[[:space:]]*\([0-9A-Za-z_]\+\)&\1&p" ${IMAGE_ROOTFS}/${sysconfdir}/selinux/config)
-    if ! setfiles -m -r ${IMAGE_ROOTFS} ${IMAGE_ROOTFS}/${sysconfdir}/selinux/${POL_TYPE}/contexts/files/file_contexts ${IMAGE_ROOTFS}
-    then
-        echo WARNING: Unable to set filesystem context, setfiles / restorecon must be run on the live image.
-        touch ${IMAGE_ROOTFS}/.autorelabel
-        exit 0
-    fi
-}
-
-DEPENDS += "policycoreutils-native"
-
-IMAGE_PREPROCESS_COMMAND:append = " selinux_set_labels ;"
 
 EOT
