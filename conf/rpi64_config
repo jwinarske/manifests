@@ -41,7 +41,7 @@ DISTRO_FEATURES:append = " seccomp"
 
 # NFT
 IMAGE_INSTALL:remove = "iptables"
-IMAGE_INSTALL:append = " nft"
+IMAGE_INSTALL:append = " nftables"
 
 COMBINED_FEATURES += "alsa "
 
