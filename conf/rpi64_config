@@ -60,8 +60,5 @@ PREFERRED_PROVIDER:libserialport = "6f9b03e"
 PREFERRED_PROVIDER:jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER:jpeg-native = "libjpeg-turbo-native"
 
-IMAGE_INSTALL:append = "\
-        aide \
-"
 
 EOT
