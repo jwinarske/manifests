@@ -39,8 +39,8 @@ PREFERRED_PROVIDER_virtual/refpolicy = "refpolicy-mls"
 # SECCOMP
 DISTRO_FEATURES:append = " seccomp"
 
-# NFT
-IMAGE_INSTALL:remove = "iptables"
+# Use nft in place of iptables/firewalld
+IMAGE_INSTALL:remove = "iptables firewalld"
 IMAGE_INSTALL:append = " nftables"
 
 COMBINED_FEATURES += "alsa "
