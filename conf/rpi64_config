@@ -39,6 +39,9 @@ PREFERRED_PROVIDER_virtual/refpolicy = "refpolicy-mls"
 # SECCOMP
 DISTRO_FEATURES:append = " seccomp"
 
+# OSSEC HID
+IMAGE_INSTALL:append = " ossec-hids"
+
 # Use nft in place of iptables/firewalld
 IMAGE_INSTALL:remove = "iptables firewalld"
 IMAGE_INSTALL:append = " nftables"
