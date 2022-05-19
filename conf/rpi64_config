@@ -39,7 +39,7 @@ PREFERRED_PROVIDER_virtual/refpolicy = "refpolicy-mls"
 COMBINED_FEATURES += "alsa "
 
 LINUX_KERNEL_TYPE = "preempt-rt"
-CMDLINE_DEBUG = "quiet selinux=1 enforcing=0"
+CMDLINE_DEBUG = "quiet"
 
 GPU_MEM = "128"
 DISPMANX_OFFLINE = "1"
