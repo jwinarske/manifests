@@ -63,6 +63,7 @@ IMAGE_INSTALL:append = " \
     perl-modules \
     python3-modules \
     strace \
+    bpftrace \
 "
 
 COMBINED_FEATURES += "alsa "
