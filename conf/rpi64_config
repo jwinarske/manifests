@@ -40,7 +40,7 @@ PREFERRED_PROVIDER_virtual/refpolicy = "refpolicy-mls"
 DISTRO_FEATURES:append = " seccomp"
 
 # OSSEC HID
-IMAGE_INSTALL:append = " ossec-hids"
+# IMAGE_INSTALL:append = " ossec-hids"
 
 # Misc
 IMAGE_INSTALL:append = " \
@@ -63,8 +63,8 @@ IMAGE_INSTALL:append = " \
     perl-modules \
     python3-modules \
     strace \
-    bpftrace \
 "
+#    bpftrace \
 
 COMBINED_FEATURES += "alsa "
 
