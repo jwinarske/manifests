@@ -11,7 +11,6 @@
   <remote fetch="http://git.yoctoproject.org" name="yocto"/>
   
   <project remote="yocto" name="poky" path="layers/poky"/>
-  <project remote="yocto" name="meta-qcom" path="layers/meta-qcom"/>
   <project remote="yocto" name="meta-security" path="layers/meta-security"/>
   <project remote="yocto" name="git/meta-arm" path="layers/meta-arm"/>
   <project remote="yocto" name="git/meta-selinux" path="layers/meta-selinux"/>
