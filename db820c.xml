@@ -36,5 +36,8 @@
 
   <project remote="github" name="kraj/meta-clang" path="layers/meta-clang" />
   <project remote="github" name="meta-flutter/meta-flutter" path="layers/meta-flutter" />
+  <project remote="github" name="jwinarske/meta-integration-extras.git" path="layers/meta-integration-extras" revision="kirkstone"/>
+  <project remote="github" name="jwinarske/meta-vulkan.git" path="layers/meta-vulkan" revision="kirkstone"/>
+  <project remote="github" name="meta-webthings/meta-webthings.git" path="layers/meta-webthings" revision="kirkstone"/>
 
 </manifest>
