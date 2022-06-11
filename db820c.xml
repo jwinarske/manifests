@@ -28,8 +28,8 @@
 
   <project remote="github" name="96boards/meta-96boards" path="layers/meta-96boards"/>
   <project remote="github" name="96boards/meta-rpb" path="layers/meta-rpb"/>
-  <project remote="github" name="96boards/oe-rpb-manifest" path="conf" revision="qcom/kirkstone">
-    <linkfile src="conf/db820c" dest="setup-environment"/>
+  <project remote="github" name="jwinarske/manifests" path="conf">
+    <linkfile src="conf/db820c_config" dest="setup-environment"/>
   </project>
 
   <project remote="github" name="kraj/meta-clang" path="layers/meta-clang" />
