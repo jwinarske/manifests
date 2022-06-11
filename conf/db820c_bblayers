@@ -26,7 +26,6 @@ BASELAYERS ?= " \
   ${OEROOT}/layers/meta-python2 \
   ${OEROOT}/layers/meta-flutter \
   ${OEROOT}/layers/meta-integration-extras \
-  ${OEROOT}/layers/meta-vulkan \
 "
 
 # These layers hold machine specific content, aka Board Support Packages
