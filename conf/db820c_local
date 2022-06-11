@@ -52,16 +52,16 @@ INIT_MANAGER = "systemd"
 DISTRO_FEATURES:remove = "sysvinit x11"
 DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan wifi wayland security"
 DISTRO_FEATURES:append = " acl xattr pam selinux audit"
-DISTRO_FEATURES:append = " seccomp"
+DISTRO_FEATURES:append = " seccomp virtualization"
 
 COMBINED_FEATURES:append = " alsa "
-          
+
 ENABLE_BINARY_LOCALE_GENERATION = "1"
-          
+
 CMDLINE_DEBUG = "quiet"
 
 PACKAGECONFIG:append:pn-ffmpeg = " openssl"
-          
+
 PREFERRED_PROVIDER:libserialport = "6f9b03e"
 
 PREFERRED_PROVIDER:jpeg = "libjpeg-turbo"
@@ -70,7 +70,7 @@ PREFERRED_PROVIDER:jpeg-native = "libjpeg-turbo-native"
 PREFERRED_VERSION_android-tools="5.1.1.r37"
 
 PREFERRED_PROVIDER_virtual/refpolicy = "refpolicy-mls"
-          
+
 IMAGE_INSTALL:append = "\
     libcamera \
     i2c-tools can-utils \
