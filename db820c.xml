@@ -30,8 +30,8 @@
   <project remote="github" name="96boards/meta-rpb" path="layers/meta-rpb"/>
   <project remote="github" name="jwinarske/manifests" path="conf">
     <linkfile src="conf/db820c_config" dest="setup-environment"/>
-    <linkfile src="conf/db820c_local" dest="conf/local.conf"/>
-    <linkfile src="conf/db820c_bblayers" dest="conf/bblayers.conf"/>
+    <linkfile src="conf/db820c_local" dest="conf/conf/local.conf"/>
+    <linkfile src="conf/db820c_bblayers" dest="conf/conf/bblayers.conf"/>
   </project>
 
   <project remote="github" name="kraj/meta-clang" path="layers/meta-clang" />
