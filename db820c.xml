@@ -15,7 +15,7 @@
   <project remote="yocto" name="git/meta-arm" path="layers/meta-arm"/>
   <project remote="yocto" name="git/meta-selinux" path="layers/meta-selinux"/>
   <project remote="yocto" name="git/meta-virtualization" path="layers/meta-virtualization"/>
-
+  
   <project remote="oe" name="meta-python2" path="layers/meta-python2"/>
   
   <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro" revision="master"/>
@@ -30,6 +30,8 @@
   <project remote="github" name="96boards/meta-rpb" path="layers/meta-rpb"/>
   <project remote="github" name="jwinarske/manifests" path="conf">
     <linkfile src="conf/db820c_config" dest="setup-environment"/>
+    <linkfile src="conf/db820c_local" dest="conf/local.conf"/>
+    <linkfile src="conf/db820c_bblayers" dest="conf/bblayers.conf"/>
   </project>
 
   <project remote="github" name="kraj/meta-clang" path="layers/meta-clang" />
