@@ -3,22 +3,32 @@
 
   <default sync-j="8" revision="kirkstone"/>
 
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="https://bitbucket.org" name="bitbucket"/>
+  <remote fetch="https://github.com" name="github"/>
   <remote fetch="http://git.linaro.org" name="linaro"/>
-  <remote fetch="https://github.com/"  name="github"/>
-
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="http://git.shr-project.org" name="shr"/>
+  <remote fetch="http://git.yoctoproject.org" name="yocto"/>
+  
   <project remote="yocto" name="poky" path="layers/poky"/>
   <project remote="yocto" name="meta-qcom" path="layers/meta-qcom"/>
   <project remote="yocto" name="meta-security" path="layers/meta-security"/>
+  <project remote="yocto" name="git/meta-arm" path="layers/meta-arm"/>
+  <project remote="yocto" name="git/meta-selinux" path="layers/meta-selinux"/>
+  <project remote="yocto" name="git/meta-virtualization" path="layers/meta-virtualization"/>
 
+  <project remote="oe" name="meta-python2" path="layers/meta-python2"/>
+  
   <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro" revision="master"/>
   <project remote="linaro" name="openembedded/meta-backports" path="layers/meta-backports"/>
 
+  <project remote="github" name="openembedded/bitbake" path="bitbake" revision="2.0" />
   <project remote="github" name="openembedded/meta-openembedded" path="layers/meta-openembedded"/>
+  <project remote="github" name="openembedded/openembedded-core" path="layers/openembedded-core"/>
+  <project remote="github" remote="github" name="ndechesne/meta-qcom" path="layers/meta-qcom"/>
 
   <project remote="github" name="96boards/meta-96boards" path="layers/meta-96boards"/>
   <project remote="github" name="96boards/meta-rpb" path="layers/meta-rpb"/>
-  
   <project remote="github" name="96boards/oe-rpb-manifest" path="conf" revision="qcom/kirkstone">
     <linkfile dest="setup-environment" src="setup-environment-internal"/>
   </project>
