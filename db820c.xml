@@ -11,7 +11,7 @@
   <project remote="yocto" name="meta-qcom" path="layers/meta-qcom"/>
   <project remote="yocto" name="meta-security" path="layers/meta-security"/>
 
-  <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro"/>
+  <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro" revision="master"/>
   <project remote="linaro" name="openembedded/meta-backports" path="layers/meta-backports"/>
 
   <project remote="github" name="openembedded/meta-openembedded" path="layers/meta-openembedded"/>
