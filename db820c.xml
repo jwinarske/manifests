@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="8" revision="kirkstone"/>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="http://git.linaro.org" name="linaro"/>
+  <remote fetch="https://github.com/"  name="github"/>
+
+  <project remote="yocto" name="poky" path="layers/poky"/>
+  <project remote="yocto" name="meta-qcom" path="layers/meta-qcom"/>
+  <project remote="yocto" name="meta-security" path="layers/meta-security"/>
+
+  <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro"/>
+  <project remote="linaro" name="openembedded/meta-backports" path="layers/meta-backports"/>
+
+  <project remote="github" name="openembedded/meta-openembedded" path="layers/meta-openembedded"/>
+
+  <project remote="github" name="96boards/meta-96boards" path="layers/meta-96boards"/>
+  <project remote="github" name="96boards/meta-rpb" path="layers/meta-rpb"/>
+  <project remote="github" name="96boards/oe-rpb-manifest" path="conf" revision="qcom/kirkstone">
+    <linkfile dest="setup-environment" src="setup-environment-internal"/>
+  </project>
+
+  <project remote="github" name="kraj/meta-clang" path="sources/meta-clang" />
+  <project remote="github" name="meta-flutter/meta-flutter" path="sources/meta-flutter" />
+
+</manifest>
