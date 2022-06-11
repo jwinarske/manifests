@@ -1,6 +1,6 @@
 # /bin/bash
 
-set -e
+set -ed
 
 MACHINE=$1
 STORAGE_TYPE=$2
@@ -20,24 +20,20 @@ echo "*  MD5 - Checking Boot Binaries *"
 echo "*********************************"
 echo "${EXPECTED_MD5}  ${BOOT_BINS}.zip" | md5sum -c
 echo "******************"
-7z e -tzip ${BOOT_BINS}.zip -o${BOOT_BINS}/
-rm -rf ${BOOT_BINS}/${BOOT_BINS}
+7z e -tzip ${BOOT_BINS}.zip -o$FLAT_BUILD_DIR/
+rm -rf $FLAT_BUILD_DIR/${BOOT_BINS}
 rm -rf ${BOOT_BINS}.zip
-
-pushd ./$BOOT_BINS
-
-mkdir -p $FLAT_BUILD_DIR
-cp ./${BOOT_BINS}/* $FLAT_BUILD_DIR/
-rm -rf ${BOOT_BINS}
 
 # copy boot image
 cp boot-${MACHINE}.img  $FLAT_BUILD_DIR/
 
 # copy rootfs
-gunzip *.rootfs.ext4.gz
-cp *.rootfs.ext4 $FLAT_BUILD_DIR/
+cp *.rootfs.ext4.gz $FLAT_BUILD_DIR/
 
+# extract
 pushd $FLAT_BUILD_DIR
+gunzip *.rootfs.ext4.gz
+rm *.rootfs.ext4.gz
 
 ROOTFS_IMG=`find -iname *.ext4 | sed -e "s/^\.\///g"`
 BOOT_IMG=`find -iname boot-${MACHINE}.img | sed -e "s/^\.\///g"`
