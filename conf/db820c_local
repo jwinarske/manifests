@@ -50,9 +50,10 @@ PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
 INIT_MANAGER = "systemd"
 
 DISTRO_FEATURES:remove = "sysvinit x11"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl vulkan wifi wayland security"
+DISTRO_FEATURES:append = " alsa bluetooth wifi usbhost"
+DISTRO_FEATURES:append = " opengl vulkan wayland"
 DISTRO_FEATURES:append = " acl xattr pam selinux audit"
-DISTRO_FEATURES:append = " seccomp virtualization"
+DISTRO_FEATURES:append = " security seccomp virtualization"
 
 COMBINED_FEATURES:append = " alsa "
 
@@ -72,6 +73,16 @@ PREFERRED_VERSION_android-tools="5.1.1.r37"
 PREFERRED_PROVIDER_virtual/refpolicy = "refpolicy-mls"
 
 IMAGE_INSTALL:append = "\
+    bluez5 \
+    geoclue \
+    gsettings-desktop-schemas \
+    liberation-fonts \
+    libgpiod \
+    networkmanager \
+    os-release \
+    upower \
+    xdg-user-dirs \
+    sqlite3 \
     libcamera \
     i2c-tools can-utils \
     kernel-module-bridge bridge-utils openvpn \
