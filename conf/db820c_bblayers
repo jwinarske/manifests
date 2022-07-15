@@ -24,7 +24,6 @@ BASELAYERS ?= " \
   ${OEROOT}/layers/meta-selinux \
   ${OEROOT}/layers/meta-clang \
   ${OEROOT}/layers/meta-python2 \
-  ${OEROOT}/layers/meta-flutter \
   ${OEROOT}/layers/meta-integration-extras \
 "
 
