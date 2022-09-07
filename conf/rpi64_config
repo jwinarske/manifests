@@ -30,14 +30,14 @@ INHERIT:append = " rm_work"
 
 INIT_MANAGER = "systemd"
 DISTRO_FEATURES:remove = "sysvinit x11 usbgadget vulkan"
-DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wifi wayland security"
+DISTRO_FEATURES:append = " alsa bluetooth usbhost opengl wifi wayland pam"
 
 # SELinux
-DISTRO_FEATURES:append = " acl xattr pam selinux audit"
-PREFERRED_PROVIDER_virtual/refpolicy = "refpolicy-mls"
+# DISTRO_FEATURES:append = " acl xattr pam selinux audit"
+# PREFERRED_PROVIDER_virtual/refpolicy = "refpolicy-mls"
 
 # SECCOMP
-DISTRO_FEATURES:append = " seccomp"
+# DISTRO_FEATURES:append = " seccomp"
 
 # OSSEC HID
 # IMAGE_INSTALL:append = " ossec-hids"
