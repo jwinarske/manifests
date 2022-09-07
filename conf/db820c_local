@@ -51,8 +51,8 @@ INIT_MANAGER = "systemd"
 
 DISTRO_FEATURES:remove = "sysvinit x11"
 DISTRO_FEATURES:append = " alsa bluetooth wifi usbhost"
-DISTRO_FEATURES:append = " opengl vulkan wayland"
-DISTRO_FEATURES:append = " acl xattr pam selinux audit"
+DISTRO_FEATURES:append = " opengl vulkan wayland pam"
+# DISTRO_FEATURES:append = " acl xattr selinux audit"
 DISTRO_FEATURES:append = " security seccomp virtualization"
 
 COMBINED_FEATURES:append = " alsa "
@@ -70,7 +70,7 @@ PREFERRED_PROVIDER:jpeg-native = "libjpeg-turbo-native"
 
 PREFERRED_VERSION_android-tools="5.1.1.r37"
 
-PREFERRED_PROVIDER_virtual/refpolicy = "refpolicy-mls"
+# PREFERRED_PROVIDER_virtual/refpolicy = "refpolicy-mls"
 
 IMAGE_INSTALL:append = "\
     bluez5 \
