@@ -29,13 +29,13 @@ INHERIT += "rm_work"
 BBMASK = "meta-networking/recipes-kernel/wireguard"
 
 DISTRO_FEATURES_remove = " sysvinit x11"
-DISTRO_FEATURES_append = " alsa bluetooth usbhost opengl vulkan systemd"
+DISTRO_FEATURES_append = " alsa bluetooth usbhost opengl wayland pam systemd security"
 
 INIT_MANAGER = "systemd"
 VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = ""
 
-DISTRO_FEATURES_append=" pam selinux"
+# DISTRO_FEATURES_append=" pam selinux"
 DISTRO_FEATURES_BACKFILL_CONSIDERED = ""
 
 COMBINED_FEATURES += "alsa "
@@ -64,9 +64,10 @@ ENABLE_BINARY_LOCALE_GENERATION = "1"
 GLIBC_GENERATE_LOCALES = "en_US.UTF-8 es_US.UTF-8 en_GB.UTF-8"
 IMAGE_LINGUAS ?= "en-us es-us en-gb"
 
+# packagegroup-core-selinux
+
 CORE_IMAGE_EXTRA_INSTALL += " \
   kernel-modules \
-  packagegroup-core-selinux \
   avahi-daemon \
   adwaita-icon-theme-cursors \
   xdg-user-dirs \
