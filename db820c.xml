@@ -8,7 +8,7 @@
   <remote fetch="http://git.linaro.org" name="linaro"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="http://git.shr-project.org" name="shr"/>
-  <remote fetch="http://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="https://git.yoctoproject.org" name="yocto"/>
   
   <project remote="yocto" name="poky" path="layers/poky"/>
   <project remote="yocto" name="meta-security" path="layers/meta-security"/>
@@ -18,8 +18,8 @@
   
   <project remote="oe" name="meta-python2" path="layers/meta-python2"/>
   
-  <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro" revision="master"/>
-  <project remote="linaro" name="openembedded/meta-backports" path="layers/meta-backports"/>
+  <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro" revision="kirkstone"/>
+  <project remote="linaro" name="openembedded/meta-backports" path="layers/meta-backports" revision="kirkstone"/>
 
   <project remote="github" name="openembedded/bitbake" path="bitbake" revision="2.0" />
   <project remote="github" name="openembedded/meta-openembedded" path="layers/meta-openembedded"/>
